@@ -65,7 +65,7 @@ Review package:
 | Item | Status | Notes |
 |---|---|---|
 | Data availability statement | Ready for review | Public accessions/DOI listed; generated summaries, figure source data, manifests, and QC files archived with GitHub/Zenodo release |
-| Code availability statement | Ready for review | R package source and analysis scripts public at GitHub and archived at Zenodo DOI 10.5281/zenodo.20787528 |
+| Code availability statement | Ready for review | R package source and analysis scripts public at GitHub and archived at Zenodo DOI 10.5281/zenodo.20787527 |
 | Key resources table | Ready for review | Public datasets, package source, R version, conventions, and source-data outputs listed |
 | Runtime information | Ready for review | R 4.6.0 and runtime records stated |
 | Project integrity check | Passed | 7 figure packages and required analysis outputs checked |

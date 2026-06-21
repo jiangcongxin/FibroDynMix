@@ -326,7 +326,7 @@ All original code has been deposited as an R package and is publicly available a
 of the date of publication. The package source, analysis scripts, generated
 analysis summaries, figure source data, manifests, legends, and export QC files
 are available at https://github.com/jiangcongxin/FibroDynMix and permanently
-archived at https://doi.org/10.5281/zenodo.20787528. Generated analyses are
+archived at https://doi.org/10.5281/zenodo.20787527. Generated analyses are
 stored under `analysis/`, and figure source data, manifests, legends, and export
 QC are stored under `figures/`. Large public count files are excluded from the
 source package tarball through `.Rbuildignore` and are available from the public
