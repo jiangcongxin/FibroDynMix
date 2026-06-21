@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "江颖"
+    }
+  ],
+  "description": "Public archive release for the FibroDynMix R package, manuscript source data, figures, analysis manifests, and iScience review package.",
+  "license": "MIT",
+  "title": "FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity"
+}
