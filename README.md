@@ -1,7 +1,15 @@
 # FibroDynMix
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20787527.svg)](https://doi.org/10.5281/zenodo.20787527)
+
 FibroDynMix is a work-in-progress R package for a hierarchical Bayesian
 dynamic mixture model of fibroblast state plasticity.
+
+Public archive:
+
+- GitHub repository: https://github.com/jiangcongxin/FibroDynMix
+- Zenodo DOI: https://doi.org/10.5281/zenodo.20787527
+- Latest archived creator metadata: `Jiang, Ying`
 
 Package-facing resources:
 
