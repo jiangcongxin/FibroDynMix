@@ -323,13 +323,14 @@ GSE246215, GSE167339, GSE156326, and GSE181316-derived project inputs as
 documented in the analysis manifests [3,21-23].
 
 All original code has been deposited as an R package and is publicly available as
-of the date of publication. The package source and analysis scripts are available
-at <<INSERT PUBLIC GITHUB REPOSITORY URL>> and permanently archived at
-<<INSERT MINTED ZENODO DOI>>. <!-- TODO before upload: replace both placeholders
-with the public GitHub URL and the minted Zenodo DOI. --> Generated analyses are
+of the date of publication. The package source, analysis scripts, generated
+analysis summaries, figure source data, manifests, legends, and export QC files
+are available at https://github.com/jiangcongxin/FibroDynMix and permanently
+archived at https://doi.org/10.5281/zenodo.20787528. Generated analyses are
 stored under `analysis/`, and figure source data, manifests, legends, and export
-QC are stored under `figures/`. Large public count files and generated analysis
-directories are excluded from the source package tarball through `.Rbuildignore`.
+QC are stored under `figures/`. Large public count files are excluded from the
+source package tarball through `.Rbuildignore` and are available from the public
+repositories and accessions listed above.
 Analyses followed R/Bioconductor-compatible single-cell data conventions and were
 run in R 4.6.0 with project-local package and runtime records [28,30,38].
 
