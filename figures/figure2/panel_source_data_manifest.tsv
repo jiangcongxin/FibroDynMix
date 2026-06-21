@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig2_condition_cell_counts.tsv; source_data/fig2_nb_objective.tsv	A balanced normal/disease public raw-count subset is fitted under the NB model.
+B	source_data/fig2_state_composition_delta.tsv	Disease-minus-normal composition shifts summarize fitted state-weight changes.
+C	source_data/fig2_cell_state_weight_heatmap.tsv; source_data/fig2_cell_order_condition_annotation.tsv	Cell-level latent state weights form a continuous condition-ordered mixture landscape.
+D	source_data/fig2_transition_flow.tsv; source_data/fig2_transition_summary.tsv	Cross-sectional state flow summarizes normal-to-disease composition redistribution without lineage interpretation.

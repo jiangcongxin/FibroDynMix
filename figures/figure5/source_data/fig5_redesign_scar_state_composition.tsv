@@ -1,0 +1,169 @@
+dataset_id	condition	condition_class	n_cells	n_total_cells	state	fraction	dataset_label	condition_label
+gse156326	hypertrophic_scar	disease	1	3937	antigen-presenting	0.000254000508001016	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1722	3937	ECM-remodeling	0.43738887477775	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	IFN-stress	0.00177800355600711	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	981	3937	inflammatory	0.249174498348997	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	177	3937	myofibroblast	0.0449580899161798	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1049	3937	resident	0.266446532893066	GSE156326	hypertrophic scar
+gse156326	normal_skin	control	119	1063	ECM-remodeling	0.111947318908749	GSE156326	normal skin
+gse156326	normal_skin	control	1	1063	IFN-stress	0.000940733772342427	GSE156326	normal skin
+gse156326	normal_skin	control	441	1063	inflammatory	0.41486359360301	GSE156326	normal skin
+gse156326	normal_skin	control	17	1063	myofibroblast	0.0159924741298213	GSE156326	normal skin
+gse156326	normal_skin	control	485	1063	resident	0.456255879586077	GSE156326	normal skin
+gse181316	keloid	disease	5	3713	antigen-presenting	0.00134661998384056	GSE181316	keloid
+gse181316	keloid	disease	1	3713	IFN-stress	0.000269323996768112	GSE181316	keloid
+gse181316	keloid	disease	3029	3713	ECM-remodeling	0.815782386210611	GSE181316	keloid
+gse181316	keloid	disease	148	3713	myofibroblast	0.0398599515216806	GSE181316	keloid
+gse181316	keloid	disease	389	3713	inflammatory	0.104767034742796	GSE181316	keloid
+gse181316	keloid	disease	141	3713	resident	0.0379746835443038	GSE181316	keloid
+gse181316	normal_scar	control	1	997	antigen-presenting	0.00100300902708124	GSE181316	normal scar
+gse181316	normal_scar	control	4	997	IFN-stress	0.00401203610832497	GSE181316	normal scar
+gse181316	normal_scar	control	307	997	ECM-remodeling	0.307923771313942	GSE181316	normal scar
+gse181316	normal_scar	control	31	997	myofibroblast	0.0310932798395186	GSE181316	normal scar
+gse181316	normal_scar	control	426	997	inflammatory	0.42728184553661	GSE181316	normal scar
+gse181316	normal_scar	control	228	997	resident	0.228686058174524	GSE181316	normal scar
+gse181316	normal_skin	control	55	290	ECM-remodeling	0.189655172413793	GSE181316	normal skin
+gse181316	normal_skin	control	81	290	inflammatory	0.279310344827586	GSE181316	normal skin
+gse181316	normal_skin	control	1	290	IFN-stress	0.00344827586206897	GSE181316	normal skin
+gse181316	normal_skin	control	121	290	resident	0.417241379310345	GSE181316	normal skin
+gse181316	normal_skin	control	32	290	myofibroblast	0.110344827586207	GSE181316	normal skin
+gse156326	hypertrophic_scar	disease	1	3937	resident	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1	3937	inflammatory	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1	3937	myofibroblast	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1	3937	ECM-remodeling	0	GSE156326	hypertrophic scar
+gse156326	normal_skin	control	1	1063	myofibroblast	0	GSE156326	normal skin
+gse156326	hypertrophic_scar	disease	1	3937	IFN-stress	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1722	3937	resident	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1722	3937	inflammatory	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1722	3937	myofibroblast	0	GSE156326	hypertrophic scar
+gse181316	keloid	disease	148	3713	IFN-stress	0	GSE181316	keloid
+gse156326	hypertrophic_scar	disease	1722	3937	antigen-presenting	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1722	3937	IFN-stress	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	resident	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	inflammatory	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	myofibroblast	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	ECM-remodeling	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	7	3937	antigen-presenting	0	GSE156326	hypertrophic scar
+gse156326	normal_skin	control	17	1063	ECM-remodeling	0	GSE156326	normal skin
+gse156326	hypertrophic_scar	disease	981	3937	resident	0	GSE156326	hypertrophic scar
+gse156326	normal_skin	control	17	1063	IFN-stress	0	GSE156326	normal skin
+gse156326	hypertrophic_scar	disease	981	3937	myofibroblast	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	981	3937	ECM-remodeling	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	981	3937	antigen-presenting	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	981	3937	IFN-stress	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	177	3937	resident	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	177	3937	inflammatory	0	GSE156326	hypertrophic scar
+gse181316	keloid	disease	5	3713	resident	0	GSE181316	keloid
+gse156326	hypertrophic_scar	disease	177	3937	ECM-remodeling	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	177	3937	antigen-presenting	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	177	3937	IFN-stress	0	GSE156326	hypertrophic scar
+gse181316	normal_scar	control	4	997	myofibroblast	0	GSE181316	normal scar
+gse156326	hypertrophic_scar	disease	1049	3937	inflammatory	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1049	3937	myofibroblast	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1049	3937	ECM-remodeling	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1049	3937	antigen-presenting	0	GSE156326	hypertrophic scar
+gse156326	hypertrophic_scar	disease	1049	3937	IFN-stress	0	GSE156326	hypertrophic scar
+gse156326	normal_skin	control	119	1063	resident	0	GSE156326	normal skin
+gse156326	normal_skin	control	119	1063	inflammatory	0	GSE156326	normal skin
+gse156326	normal_skin	control	119	1063	myofibroblast	0	GSE156326	normal skin
+gse181316	keloid	disease	3029	3713	inflammatory	0	GSE181316	keloid
+gse156326	normal_skin	control	119	1063	antigen-presenting	0	GSE156326	normal skin
+gse156326	normal_skin	control	119	1063	IFN-stress	0	GSE156326	normal skin
+gse156326	normal_skin	control	1	1063	resident	0	GSE156326	normal skin
+gse156326	normal_skin	control	1	1063	inflammatory	0	GSE156326	normal skin
+gse181316	keloid	disease	148	3713	resident	0	GSE181316	keloid
+gse156326	normal_skin	control	1	1063	ECM-remodeling	0	GSE156326	normal skin
+gse156326	normal_skin	control	1	1063	antigen-presenting	0	GSE156326	normal skin
+gse181316	keloid	disease	148	3713	ECM-remodeling	0	GSE181316	keloid
+gse156326	normal_skin	control	441	1063	resident	0	GSE156326	normal skin
+gse181316	normal_scar	control	426	997	ECM-remodeling	0	GSE181316	normal scar
+gse156326	normal_skin	control	441	1063	myofibroblast	0	GSE156326	normal skin
+gse156326	normal_skin	control	441	1063	ECM-remodeling	0	GSE156326	normal skin
+gse156326	normal_skin	control	441	1063	antigen-presenting	0	GSE156326	normal skin
+gse156326	normal_skin	control	441	1063	IFN-stress	0	GSE156326	normal skin
+gse156326	normal_skin	control	17	1063	resident	0	GSE156326	normal skin
+gse156326	normal_skin	control	17	1063	inflammatory	0	GSE156326	normal skin
+gse181316	normal_scar	control	228	997	antigen-presenting	0	GSE181316	normal scar
+gse181316	keloid	disease	141	3713	inflammatory	0	GSE181316	keloid
+gse156326	normal_skin	control	17	1063	antigen-presenting	0	GSE156326	normal skin
+gse181316	keloid	disease	141	3713	ECM-remodeling	0	GSE181316	keloid
+gse181316	keloid	disease	141	3713	antigen-presenting	0	GSE181316	keloid
+gse156326	normal_skin	control	485	1063	inflammatory	0	GSE156326	normal skin
+gse156326	normal_skin	control	485	1063	myofibroblast	0	GSE156326	normal skin
+gse156326	normal_skin	control	485	1063	ECM-remodeling	0	GSE156326	normal skin
+gse156326	normal_skin	control	485	1063	antigen-presenting	0	GSE156326	normal skin
+gse156326	normal_skin	control	485	1063	IFN-stress	0	GSE156326	normal skin
+gse181316	normal_skin	control	81	290	myofibroblast	0	GSE181316	normal skin
+gse181316	keloid	disease	5	3713	inflammatory	0	GSE181316	keloid
+gse181316	keloid	disease	5	3713	myofibroblast	0	GSE181316	keloid
+gse181316	keloid	disease	5	3713	ECM-remodeling	0	GSE181316	keloid
+gse181316	normal_skin	control	1	290	resident	0	GSE181316	normal skin
+gse181316	keloid	disease	5	3713	IFN-stress	0	GSE181316	keloid
+gse181316	keloid	disease	1	3713	resident	0	GSE181316	keloid
+gse181316	keloid	disease	1	3713	inflammatory	0	GSE181316	keloid
+gse181316	keloid	disease	1	3713	myofibroblast	0	GSE181316	keloid
+gse181316	keloid	disease	1	3713	ECM-remodeling	0	GSE181316	keloid
+gse181316	keloid	disease	1	3713	antigen-presenting	0	GSE181316	keloid
+gse181316	normal_skin	control	121	290	inflammatory	0	GSE181316	normal skin
+gse181316	keloid	disease	3029	3713	resident	0	GSE181316	keloid
+gse181316	normal_scar	control	307	997	IFN-stress	0	GSE181316	normal scar
+gse181316	keloid	disease	3029	3713	myofibroblast	0	GSE181316	keloid
+gse181316	normal_scar	control	31	997	inflammatory	0	GSE181316	normal scar
+gse181316	keloid	disease	3029	3713	antigen-presenting	0	GSE181316	keloid
+gse181316	keloid	disease	3029	3713	IFN-stress	0	GSE181316	keloid
+gse181316	normal_scar	control	31	997	antigen-presenting	0	GSE181316	normal scar
+gse181316	keloid	disease	148	3713	inflammatory	0	GSE181316	keloid
+gse181316	normal_scar	control	426	997	resident	0	GSE181316	normal scar
+gse181316	normal_skin	control	32	290	IFN-stress	0	GSE181316	normal skin
+gse181316	keloid	disease	148	3713	antigen-presenting	0	GSE181316	keloid
+gse181316	normal_scar	control	1	997	resident	0	GSE181316	normal scar
+gse181316	keloid	disease	389	3713	resident	0	GSE181316	keloid
+gse181316	normal_scar	control	426	997	IFN-stress	0	GSE181316	normal scar
+gse181316	keloid	disease	389	3713	myofibroblast	0	GSE181316	keloid
+gse181316	keloid	disease	389	3713	ECM-remodeling	0	GSE181316	keloid
+gse181316	keloid	disease	389	3713	antigen-presenting	0	GSE181316	keloid
+gse181316	keloid	disease	389	3713	IFN-stress	0	GSE181316	keloid
+gse181316	normal_scar	control	4	997	inflammatory	0	GSE181316	normal scar
+gse181316	normal_scar	control	228	997	IFN-stress	0	GSE181316	normal scar
+gse181316	keloid	disease	141	3713	myofibroblast	0	GSE181316	keloid
+gse181316	normal_skin	control	55	290	inflammatory	0	GSE181316	normal skin
+gse181316	normal_skin	control	55	290	myofibroblast	0	GSE181316	normal skin
+gse181316	keloid	disease	141	3713	IFN-stress	0	GSE181316	keloid
+gse181316	normal_scar	control	307	997	inflammatory	0	GSE181316	normal scar
+gse181316	normal_scar	control	1	997	inflammatory	0	GSE181316	normal scar
+gse181316	normal_scar	control	1	997	myofibroblast	0	GSE181316	normal scar
+gse181316	normal_scar	control	1	997	ECM-remodeling	0	GSE181316	normal scar
+gse181316	normal_skin	control	121	290	ECM-remodeling	0	GSE181316	normal skin
+gse181316	normal_scar	control	1	997	IFN-stress	0	GSE181316	normal scar
+gse181316	normal_scar	control	4	997	resident	0	GSE181316	normal scar
+gse181316	normal_skin	control	32	290	resident	0	GSE181316	normal skin
+gse181316	normal_scar	control	31	997	ECM-remodeling	0	GSE181316	normal scar
+gse181316	normal_scar	control	4	997	ECM-remodeling	0	GSE181316	normal scar
+gse181316	normal_scar	control	4	997	antigen-presenting	0	GSE181316	normal scar
+gse181316	normal_skin	control	1	290	ECM-remodeling	0	GSE181316	normal skin
+gse181316	normal_scar	control	307	997	resident	0	GSE181316	normal scar
+gse181316	normal_scar	control	426	997	myofibroblast	0	GSE181316	normal scar
+gse181316	normal_scar	control	307	997	myofibroblast	0	GSE181316	normal scar
+gse181316	normal_scar	control	426	997	antigen-presenting	0	GSE181316	normal scar
+gse181316	normal_scar	control	307	997	antigen-presenting	0	GSE181316	normal scar
+gse181316	normal_skin	control	121	290	myofibroblast	0	GSE181316	normal skin
+gse181316	normal_scar	control	31	997	resident	0	GSE181316	normal scar
+gse181316	normal_skin	control	121	290	IFN-stress	0	GSE181316	normal skin
+gse181316	normal_scar	control	228	997	ECM-remodeling	0	GSE181316	normal scar
+gse181316	normal_skin	control	81	290	IFN-stress	0	GSE181316	normal skin
+gse181316	normal_skin	control	32	290	inflammatory	0	GSE181316	normal skin
+gse181316	normal_scar	control	31	997	IFN-stress	0	GSE181316	normal scar
+gse181316	normal_skin	control	32	290	antigen-presenting	0	GSE181316	normal skin
+gse181316	normal_skin	control	81	290	resident	0	GSE181316	normal skin
+gse181316	normal_skin	control	1	290	antigen-presenting	0	GSE181316	normal skin
+gse181316	normal_skin	control	55	290	antigen-presenting	0	GSE181316	normal skin
+gse181316	normal_skin	control	55	290	IFN-stress	0	GSE181316	normal skin
+gse181316	normal_skin	control	81	290	antigen-presenting	0	GSE181316	normal skin
+gse181316	normal_skin	control	32	290	ECM-remodeling	0	GSE181316	normal skin
+gse181316	normal_scar	control	228	997	inflammatory	0	GSE181316	normal scar
+gse181316	normal_scar	control	228	997	myofibroblast	0	GSE181316	normal scar
+gse181316	normal_skin	control	1	290	myofibroblast	0	GSE181316	normal skin
+gse181316	normal_skin	control	121	290	antigen-presenting	0	GSE181316	normal skin
+gse181316	normal_skin	control	55	290	resident	0	GSE181316	normal skin
+gse181316	normal_skin	control	81	290	ECM-remodeling	0	GSE181316	normal skin
+gse181316	normal_skin	control	1	290	inflammatory	0	GSE181316	normal skin

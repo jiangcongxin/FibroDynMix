@@ -1,0 +1,7 @@
+panel	source_data	claim
+A	source_data/public_smoke_marker_coverage.tsv	Weak-prior markers are retained after public-data input preparation.
+B	source_data/public_smoke_nb_objective.tsv	The raw-count NB objective improves during the smoke-test fit.
+C	source_data/public_smoke_dataset_manifest.tsv; source_data/public_smoke_transition_summary.tsv	The public raw-count dataset and smoke-test scope are documented.
+D	source_data/public_smoke_state_composition.tsv	FibroDynMix estimates condition-level state composition from real raw counts.
+E	source_data/public_smoke_cell_fpi.tsv	FibroDynMix yields cell-level FPI values from real raw counts.
+F	source_data/public_smoke_transition_flow.tsv	Cross-sectional state flow can be inferred when normal and disease labels are available.

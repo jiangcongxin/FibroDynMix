@@ -1,0 +1,5 @@
+dataset_id	condition	n_cells	mean_library_size	median_library_size	mean_state_entropy	dominant_state_fraction
+gse246215_gc_fibroblast	disease	80	4312.625	3502.5	1.14520268413148	0.291476574609837
+gse246215_hcc_fibroblast	disease	80	467772.3875	467467.5	0.283969343065835	0.911706868165619
+gse246215_nsclc_fibroblast	disease	80	7620.0375	7864.5	0.783972996101413	0.661855704051971
+gse246215_tnbc_fibroblast	disease	80	3896.35	3310.5	1.09059467350561	0.261978233719375

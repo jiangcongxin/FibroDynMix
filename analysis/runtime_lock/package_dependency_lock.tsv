@@ -1,0 +1,15 @@
+package	dependency_field	installed	version	source	required_for
+R	runtime	TRUE	4.6.0	base R runtime	package tests, analysis scripts, and R CMD check
+data.table	Suggests	TRUE	1.18.4	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+GEOquery	Suggests	TRUE	2.80.0	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+ggplot2	Suggests	TRUE	4.0.3	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+irlba	Suggests	TRUE	2.3.7	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+lsa	Suggests	TRUE	0.73.4	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+Matrix	Suggests	TRUE	1.7.5	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+NMF	Suggests	TRUE	0.28	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+scater	Suggests	TRUE	1.40.1	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+scran	Suggests	TRUE	1.40.0	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+scuttle	Suggests	TRUE	1.22.0	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+SeuratObject	Suggests	TRUE	5.4.0	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+SingleCellExperiment	Suggests	TRUE	1.34.0	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows
+testthat	Suggests	TRUE	3.3.2	DESCRIPTION	optional benchmark, public data, single-cell container, and test workflows

@@ -1,0 +1,6 @@
+label	elapsed_sec	n_genes	n_cells	density
+marker_baseline_sparse	0.00800000000000001	300	400	0.04
+marker_baseline_dense	0.00100000000000033	300	400	0.04
+nb_objective_sparse	0.0150000000000001	300	400	0.04
+nb_objective_dense	0.00700000000000012	300	400	0.04
+transfer_sparse_chunked	0.772	300	400	0.04

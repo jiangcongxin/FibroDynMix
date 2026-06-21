@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig5a_gse167339_donor_state_composition.tsv	GSE167339 Human1/Human2 show donor-level state-composition shifts between control and perturbed collagen scar-system conditions.
+B	source_data/fig5b_gse167339_leave_donor_transfer.tsv	GSE167339 leave-donor-out transfer converges across held-out donors, with Human3 interpreted as hash-unknown robustness evidence.
+C	source_data/fig5c_scar_external_state_composition.tsv	GSE156326 and GSE181316 external scar cohorts show ECM-remodeling-rich dominant-state patterns in disease-context samples.
+D	source_data/fig5d_scar_module_validation.tsv	Scar pseudobulk module scores show positive descriptive deltas, with q values retained in source data and not presented as FDR-significant effects.

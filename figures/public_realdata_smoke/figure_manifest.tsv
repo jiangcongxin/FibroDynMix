@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	source_doi	n_cells	n_genes	nb_objective_improvement	transition_converged
+Supplementary Figure S2	FibroDynMix executes end-to-end on public raw UMI fibroblast count data and yields auditable NB, state composition, FPI, and transition-flow outputs.	Technical smoke test only; not a disease-mechanism result without full QC, biological replication, cell curation, and sensitivity analysis.	10.6071/M3238R	240	720	0.122729094488759	TRUE

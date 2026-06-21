@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig6_bootstrap_sample_composition_intervals.tsv	Bootstrap resampling provides sample-level state-composition intervals.
+B	source_data/fig6_vi_cell_state_intervals.tsv	The lightweight VI posterior returns cell-level state-weight interval widths by state.
+C	source_data/fig6_vi_interval_coverage_width.tsv	Simulation-calibrated VI intervals improve empirical coverage at the cost of wider intervals.
+D	source_data/fig6_vi_uncertainty_vs_entropy.tsv	Cells with greater mixed-state entropy tend to show wider state-weight uncertainty.

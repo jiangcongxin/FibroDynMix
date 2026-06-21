@@ -1,0 +1,36 @@
+# macOS and editor state
+.DS_Store
+*.Rproj
+.Rproj.user/
+
+# R build and check outputs
+*.Rcheck/
+..Rcheck/
+FibroDynMix_*.tar.gz
+Rplots.pdf
+
+# Local runtime environments
+.Renviron
+.Rhistory
+.RData
+.venv*/
+.venv-scvi/
+
+# Large local data and unrelated/generated workspaces
+data/
+archive/
+projects/
+
+# Root-level raw count files retained locally for reproduction
+MT3_CAFs_raw.txt
+Normal_mammary_fibroblasts_raw.txt
+
+# Binary data exports
+*.h5ad
+*.h5
+*.rds
+*.Rds
+*.RData
+
+# Local tooling state
+.kunsdd/

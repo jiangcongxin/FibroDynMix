@@ -1,0 +1,13 @@
+state	condition	composition
+resident	normal	0.701339572339712
+inflammatory	normal	0.0726708900401651
+myofibroblast	normal	0.0723346474709254
+ECM-remodeling	normal	0.0510806413589803
+antigen-presenting	normal	0.0513635938578772
+IFN-stress	normal	0.0512106549323401
+resident	disease	0.132861045617085
+inflammatory	disease	0.28133480138622
+myofibroblast	disease	0.342606330697252
+ECM-remodeling	disease	0.193705750101108
+antigen-presenting	disease	0.0247754857464935
+IFN-stress	disease	0.0247165864518406

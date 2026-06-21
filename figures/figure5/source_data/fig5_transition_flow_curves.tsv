@@ -1,0 +1,10 @@
+source_state	target_state	flow	x	xend	y	yend	source_label	target_label
+resident	myofibroblast	0.247190095819785	1	2	6	5	Resident	MyoFB
+resident	inflammatory	0.190843715436276	1	2	6	2	Resident	Inflamm.
+resident	ECM-remodeling	0.130444720836214	1	2	6	1	Resident	ECM
+antigen-presenting	myofibroblast	0.0115612390648721	1	2	4	5	AP	MyoFB
+IFN-stress	myofibroblast	0.0115203479738273	1	2	3	5	IFN	MyoFB
+antigen-presenting	inflammatory	0.00892588277402422	1	2	4	2	AP	Inflamm.
+IFN-stress	inflammatory	0.00889431270760487	1	2	3	2	IFN	Inflamm.
+antigen-presenting	ECM-remodeling	0.00610098312125524	1	2	4	1	AP	ECM
+IFN-stress	ECM-remodeling	0.00607940447774875	1	2	3	1	IFN	ECM

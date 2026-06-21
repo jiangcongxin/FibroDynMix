@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig6_condition_state_composition.tsv	Normal and disease simulated conditions have distinct latent state composition.
+B	source_data/fig6_transition_flow_long.tsv; source_data/fig6_transition_flow_summary.tsv	Entropy-regularized transport estimates condition-associated state flow.
+C	source_data/fig6_cell_fpi.tsv	FPI summarizes mixed-state entropy and transition potential by condition.
+D	source_data/fig6_cell_fpi.tsv; source_data/fig6_transition_cell_counts.tsv	Simulator-labeled rare transition cells can be evaluated against FPI, with rare-subset size reported.

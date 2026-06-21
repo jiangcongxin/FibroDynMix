@@ -1,0 +1,8 @@
+field	value
+source_counts	data/public_dryad_breast_fibroblast/dryad_breast_fibroblast_counts.rds
+source_metadata	data/public_dryad_breast_fibroblast/dryad_breast_fibroblast_metadata.tsv
+condition_col	condition
+study_col	study_id
+donor_col	donor_id
+stratify_col	condition
+seed	1001

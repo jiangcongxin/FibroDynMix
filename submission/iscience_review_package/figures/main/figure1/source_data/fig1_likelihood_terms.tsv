@@ -1,0 +1,7 @@
+term	specification	y
+Observation	Raw UMI counts enter the model with a library-size offset.	0.82
+Likelihood	Negative-binomial means link counts to state-specific gene programs.	0.684
+Latent state	Each cell carries continuous simplex weights rather than a forced hard class.	0.548
+Adjustment	Study and donor terms absorb cohort- and sample-level count shifts.	0.412
+Orientation	Marker sets orient states without replacing likelihood-based inference.	0.276
+Readouts	Composition, FPI, transfer, uncertainty, and cross-sectional flow are reported as bounded outputs.	0.14

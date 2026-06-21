@@ -1,0 +1,17 @@
+scenario	replicate	method	from_n_outer	to_n_outer	best_objective_delta	rmse_delta	dominant_accuracy_delta	downstream_balanced_accuracy_delta	lower_objective_worse_rmse
+continuous	1	fibrodynmix_nb	10	20	-0.00537252575498148	0.0140099523600599	-0.125	-0.03125	TRUE
+continuous	2	fibrodynmix_nb	10	20	-0.00204413372143386	0.00484364178891183	0.03125	-0.0625	TRUE
+discrete	1	fibrodynmix_nb	10	20	-0.00469798217061723	0.0113482130217639	-0.03125	-0.0625	TRUE
+discrete	2	fibrodynmix_nb	10	20	-0.00324374551446671	0.0168123683757154	-0.03125	-0.09375	TRUE
+batch_confounding	1	fibrodynmix_nb	10	20	-0.00230957874097237	0.0139939899720775	-0.0625	-0.0625	TRUE
+batch_confounding	2	fibrodynmix_nb	10	20	-0.00401707722154443	0.0121788065879297	0	0	TRUE
+rare_transition	1	fibrodynmix_nb	10	20	-0.00213341741611139	0.0084819843794196	-0.0625	-0.0625	TRUE
+rare_transition	2	fibrodynmix_nb	10	20	-0.00403026213723146	0.0160881440169355	-0.03125	0.03125	TRUE
+continuous	1	fibrodynmix_nb_study	10	20	-0.00414932087931263	0.00481305103935778	-0.0625	0	TRUE
+continuous	2	fibrodynmix_nb_study	10	20	-0.00281531099500265	0.00745166775976569	0.0625	0	TRUE
+discrete	1	fibrodynmix_nb_study	10	20	-0.00487312442839594	0.0120262802708715	0	-0.125	TRUE
+discrete	2	fibrodynmix_nb_study	10	20	-0.00330633127097801	0.0223793627764828	-0.09375	-0.03125	TRUE
+batch_confounding	1	fibrodynmix_nb_study	10	20	-0.00397636216062436	0.0185168360895943	-0.125	-0.09375	TRUE
+batch_confounding	2	fibrodynmix_nb_study	10	20	-0.00638880266342712	0.0099001018161789	0.03125	-0.03125	TRUE
+rare_transition	1	fibrodynmix_nb_study	10	20	-0.00170937024558859	0.00747175788410356	0	0.03125	TRUE
+rare_transition	2	fibrodynmix_nb_study	10	20	-0.00455507563529434	0.0125586283048077	0	0	TRUE

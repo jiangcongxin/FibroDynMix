@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	n_cells	n_genes	objective_improvement
+Figure 2	FibroDynMix runs on public raw-count fibroblast data and returns interpretable condition-level composition shifts, cell-level mixture weights, and cross-sectional state-flow summaries.	Public pooled-count method demonstration; not a disease-mechanism result, clinical biomarker, or lineage-tracing claim.	600	1217	0.0900298597756899

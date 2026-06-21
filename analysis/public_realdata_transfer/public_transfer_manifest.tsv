@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	n_directions	max_cells_per_condition	retained_genes	seed
+public_realdata_transfer	FibroDynMix can freeze a raw-count NB state program learned in one public fibroblast condition and infer held-out cell state mixtures in the other condition.	Real-data engineering smoke test on two public mouse breast fibroblast count files; not a full multi-donor human cross-cohort atlas validation or disease-mechanism claim.	2	160	720	1207

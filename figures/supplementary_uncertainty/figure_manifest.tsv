@@ -1,0 +1,2 @@
+figure	claim_boundary	primary_claim
+Supplementary Figure S1	Bootstrap uncertainty summaries from simulated data; not full Bayesian posterior credible intervals.	Cell bootstrap provides uncertainty summaries for state composition, cell entropy, and marker-program stability.

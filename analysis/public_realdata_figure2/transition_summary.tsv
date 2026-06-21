@@ -1,0 +1,2 @@
+status	normal_label	disease_label	expected_cost	entropy	converged	iterations
+ok	normal	disease	35.3721969148314	2.27622283449941	TRUE	42

@@ -1,0 +1,3 @@
+file	condition	source_path
+MT3_CAFs_raw.txt	disease	/Volumes/bioSSD/RCode/FibroDynMix/data/public_dryad_breast_fibroblast/MT3_CAFs_raw.txt
+Normal_mammary_fibroblasts_raw.txt	normal	/Volumes/bioSSD/RCode/FibroDynMix/data/public_dryad_breast_fibroblast/Normal_mammary_fibroblasts_raw.txt

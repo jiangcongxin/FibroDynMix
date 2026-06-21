@@ -1,0 +1,13 @@
+study_id	donor_id	condition	state	composition
+Dryad_MT3_CAF	MT3_CAF_pool	disease	resident	0.063477407388936
+Dryad_MT3_CAF	MT3_CAF_pool	disease	inflammatory	0.0181176511298312
+Dryad_MT3_CAF	MT3_CAF_pool	disease	myofibroblast	0.260297058941052
+Dryad_MT3_CAF	MT3_CAF_pool	disease	ECM-remodeling	0.588900625984426
+Dryad_MT3_CAF	MT3_CAF_pool	disease	antigen-presenting	0.00937016133945169
+Dryad_MT3_CAF	MT3_CAF_pool	disease	IFN-stress	0.0598370952163034
+Dryad_normal_mammary	normal_mammary_pool	normal	resident	0.454280971945824
+Dryad_normal_mammary	normal_mammary_pool	normal	inflammatory	0.231926264301516
+Dryad_normal_mammary	normal_mammary_pool	normal	myofibroblast	0.0363943766840305
+Dryad_normal_mammary	normal_mammary_pool	normal	ECM-remodeling	0.0881834888840057
+Dryad_normal_mammary	normal_mammary_pool	normal	antigen-presenting	0.0611918331436957
+Dryad_normal_mammary	normal_mammary_pool	normal	IFN-stress	0.128023065040928

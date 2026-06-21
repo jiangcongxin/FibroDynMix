@@ -1,0 +1,13 @@
+hash_min_count	hash_min_ratio	n_assigned_cells	n_hash_groups_ge_40	largest_hash_group_cells	smallest_retained_hash_group_cells
+5	1.5	3169	4	1667	135
+5	2	2358	4	1331	112
+5	3	1359	4	907	80
+10	1.5	3169	4	1667	135
+10	2	2358	4	1331	112
+10	3	1359	4	907	80
+20	1.5	3168	4	1667	135
+20	2	2357	4	1331	112
+20	3	1359	4	907	80
+50	1.5	3168	4	1667	135
+50	2	2357	4	1331	112
+50	3	1359	4	907	80

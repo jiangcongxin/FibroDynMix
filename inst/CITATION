@@ -1,0 +1,8 @@
+bibentry(
+  bibtype = "Manual",
+  title = "FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity",
+  author = person("FibroDynMix", "Developers"),
+  year = "2026",
+  note = "R package version 0.0.0.9000",
+  textVersion = "FibroDynMix Developers (2026). FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity. R package version 0.0.0.9000."
+)

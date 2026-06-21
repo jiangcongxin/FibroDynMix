@@ -1,0 +1,3 @@
+condition	xmin	xmax	label
+normal	1	300	normal
+disease	301	600	disease

@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig5_state_relative_affinity_lower_triangle.tsv	State relationships are shown as a clustered lower-triangle relative-affinity heatmap to reduce redundant matrix encoding.
+B	source_data/fig5_transition_flow_curves.tsv	The strongest cross-condition transition-flow edges summarize model-derived state redistribution.
+C	source_data/fig5_fpi_component_raincloud.tsv	FPI, entropy, and transition-potential distributions separate total plasticity from its components.
+D	source_data/fig5_fpi_decomposition_cells.tsv	Disease cells have lower transition potential at comparable entropy, explaining lower FPI.

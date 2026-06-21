@@ -1,0 +1,2 @@
+input_genes	retained_genes	input_cells	retained_cells	dropped_zero_library_cells	min_cells_per_gene	min_counts_per_gene
+1217	1217	600	600	0	0	0

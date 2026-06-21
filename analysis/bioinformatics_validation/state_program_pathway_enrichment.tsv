@@ -1,0 +1,73 @@
+validation_dataset	state	pathway	n_program_genes	n_pathway_genes	n_overlap	overlap_genes	p_value	q_value
+GSE246215	resident	ECM_organization	30	13	0		1	1
+GSE246215	resident	TGF_beta_contractile	30	11	0		1	1
+GSE246215	resident	Interferon_response	30	10	0		1	1
+GSE246215	resident	Antigen_presentation	30	9	0		1	1
+GSE246215	resident	Cytokine_chemokine	30	9	1	CXCL14	0.00685763874116452	0.0822916648939742
+GSE246215	resident	Resident_matrix_homeostasis	30	8	4	DCN;LUM;FBLN1;PDGFRA	1.93490879864051e-11	6.96567167510583e-10
+GSE246215	inflammatory	ECM_organization	30	13	0		1	1
+GSE246215	inflammatory	TGF_beta_contractile	30	11	0		1	1
+GSE246215	inflammatory	Interferon_response	30	10	0		1	1
+GSE246215	inflammatory	Antigen_presentation	30	9	0		1	1
+GSE246215	inflammatory	Cytokine_chemokine	30	9	0		1	1
+GSE246215	inflammatory	Resident_matrix_homeostasis	30	8	0		1	1
+GSE246215	myofibroblast	ECM_organization	30	13	0		1	1
+GSE246215	myofibroblast	TGF_beta_contractile	30	11	0		1	1
+GSE246215	myofibroblast	Interferon_response	30	10	0		1	1
+GSE246215	myofibroblast	Antigen_presentation	30	9	0		1	1
+GSE246215	myofibroblast	Cytokine_chemokine	30	9	0		1	1
+GSE246215	myofibroblast	Resident_matrix_homeostasis	30	8	0		1	1
+GSE246215	ECM-remodeling	ECM_organization	30	13	5	COL1A1;COL5A1;POSTN;COL3A1;MMP14	2.3514120000188e-13	1.69301664001353e-11
+GSE246215	ECM-remodeling	TGF_beta_contractile	30	11	0		1	1
+GSE246215	ECM-remodeling	Interferon_response	30	10	0		1	1
+GSE246215	ECM-remodeling	Antigen_presentation	30	9	0		1	1
+GSE246215	ECM-remodeling	Cytokine_chemokine	30	9	0		1	1
+GSE246215	ECM-remodeling	Resident_matrix_homeostasis	30	8	0		1	1
+GSE246215	antigen-presenting	ECM_organization	30	13	0		1	1
+GSE246215	antigen-presenting	TGF_beta_contractile	30	11	0		1	1
+GSE246215	antigen-presenting	Interferon_response	30	10	0		1	1
+GSE246215	antigen-presenting	Antigen_presentation	30	9	0		1	1
+GSE246215	antigen-presenting	Cytokine_chemokine	30	9	0		1	1
+GSE246215	antigen-presenting	Resident_matrix_homeostasis	30	8	0		1	1
+GSE246215	IFN-stress	ECM_organization	30	13	0		1	1
+GSE246215	IFN-stress	TGF_beta_contractile	30	11	0		1	1
+GSE246215	IFN-stress	Interferon_response	30	10	0		1	1
+GSE246215	IFN-stress	Antigen_presentation	30	9	0		1	1
+GSE246215	IFN-stress	Cytokine_chemokine	30	9	0		1	1
+GSE246215	IFN-stress	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	resident	ECM_organization	30	13	0		1	1
+GSE167339	resident	TGF_beta_contractile	30	11	0		1	1
+GSE167339	resident	Interferon_response	30	10	0		1	1
+GSE167339	resident	Antigen_presentation	30	9	1	B2M	0.00685763874116452	0.0822916648939742
+GSE167339	resident	Cytokine_chemokine	30	9	0		1	1
+GSE167339	resident	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	inflammatory	ECM_organization	30	13	2	COL6A1;MMP14	4.38067466428632e-05	0.000788521439571538
+GSE167339	inflammatory	TGF_beta_contractile	30	11	0		1	1
+GSE167339	inflammatory	Interferon_response	30	10	0		1	1
+GSE167339	inflammatory	Antigen_presentation	30	9	0		1	1
+GSE167339	inflammatory	Cytokine_chemokine	30	9	0		1	1
+GSE167339	inflammatory	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	myofibroblast	ECM_organization	30	13	0		1	1
+GSE167339	myofibroblast	TGF_beta_contractile	30	11	0		1	1
+GSE167339	myofibroblast	Interferon_response	30	10	0		1	1
+GSE167339	myofibroblast	Antigen_presentation	30	9	0		1	1
+GSE167339	myofibroblast	Cytokine_chemokine	30	9	0		1	1
+GSE167339	myofibroblast	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	ECM-remodeling	ECM_organization	30	13	3	COL1A1;COL3A1;COL1A2	1.14582285228615e-07	2.74997484548676e-06
+GSE167339	ECM-remodeling	TGF_beta_contractile	30	11	0		1	1
+GSE167339	ECM-remodeling	Interferon_response	30	10	0		1	1
+GSE167339	ECM-remodeling	Antigen_presentation	30	9	0		1	1
+GSE167339	ECM-remodeling	Cytokine_chemokine	30	9	0		1	1
+GSE167339	ECM-remodeling	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	antigen-presenting	ECM_organization	30	13	0		1	1
+GSE167339	antigen-presenting	TGF_beta_contractile	30	11	0		1	1
+GSE167339	antigen-presenting	Interferon_response	30	10	0		1	1
+GSE167339	antigen-presenting	Antigen_presentation	30	9	0		1	1
+GSE167339	antigen-presenting	Cytokine_chemokine	30	9	0		1	1
+GSE167339	antigen-presenting	Resident_matrix_homeostasis	30	8	0		1	1
+GSE167339	IFN-stress	ECM_organization	30	13	0		1	1
+GSE167339	IFN-stress	TGF_beta_contractile	30	11	0		1	1
+GSE167339	IFN-stress	Interferon_response	30	10	0		1	1
+GSE167339	IFN-stress	Antigen_presentation	30	9	0		1	1
+GSE167339	IFN-stress	Cytokine_chemokine	30	9	0		1	1
+GSE167339	IFN-stress	Resident_matrix_homeostasis	30	8	0		1	1

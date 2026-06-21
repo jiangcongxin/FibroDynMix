@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	n_registered_analyses	n_existing_analysis_dirs	n_primary_manifests	n_scripts	n_docs	all_registered_outputs_present	generated_at
+reproducibility_audit	FibroDynMix has a source-backed reproducibility map linking scripts, analysis outputs, documents, and claim boundaries.	Audit checks file presence and metadata coverage; it does not rerun every heavy analysis.	21	21	21	36	33	TRUE	2026-06-14 02:47:03.160767

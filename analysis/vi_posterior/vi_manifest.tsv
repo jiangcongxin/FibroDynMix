@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	n_cells	n_genes	n_states	n_draws	best_elbo	state_weight_rmse	dominant_accuracy
+vi_posterior	A logistic-normal variational posterior layer returns raw-count NB posterior state summaries with credible intervals and an ELBO-like trace.	Lightweight mean-field posterior over cell state logits around the NB mode; not a full amortized VI or posterior over all hierarchical parameters.	32	90	6	40	-3851.73303542555	0.172211969302484	0.28125

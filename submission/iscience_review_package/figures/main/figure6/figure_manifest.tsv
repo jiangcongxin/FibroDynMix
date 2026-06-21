@@ -1,0 +1,2 @@
+figure	claim_boundary	primary_claim	expected_cost	flow_entropy	converged
+Figure 6	Cross-sectional inferred state flow and FPI from simulated data; not lineage tracing or observed temporal transition.	FibroDynMix estimates condition-associated state flow and a cell-level plasticity index from latent state mixtures.	15.3812209546272	2.16019274837591	TRUE

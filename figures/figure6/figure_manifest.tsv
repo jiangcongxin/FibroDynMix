@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	bootstrap_source	vi_source
+Figure 6	FibroDynMix reports uncertainty through bootstrap state-composition intervals, cell-level VI state-weight intervals, simulation-calibrated VI coverage diagnostics, and entropy-linked uncertainty summaries.	Uncertainty summaries combine bootstrap and lightweight logistic-normal VI diagnostics; they are not a full all-parameter Bayesian posterior or real-data calibration guarantee.	analysis/bootstrap_uncertainty	analysis/vi_posterior; analysis/selected_nb_final_summaries

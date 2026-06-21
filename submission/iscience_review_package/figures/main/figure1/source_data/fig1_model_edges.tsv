@@ -1,0 +1,8 @@
+from	to	edge_type
+counts	nb	main
+nb	simplex	main
+simplex	outputs	main
+study	nb	support
+markers	simplex	support
+simplex	uncertainty	support
+uncertainty	outputs	support

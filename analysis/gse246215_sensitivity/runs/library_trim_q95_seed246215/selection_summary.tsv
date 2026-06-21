@@ -1,0 +1,5 @@
+sensitivity_mode	seed	dataset_id	cancer_type_short	n_selected_cells	n_patients	n_samples	mean_library_size	median_library_size	max_library_size
+library_trim_q95	246215	gse246215_gc_library_trim_q95_seed246215	GC	60	7	7	6372.5	6037.5	15290
+library_trim_q95	246215	gse246215_hcc_library_trim_q95_seed246215	HCC	60	2	2	1035707.55	1025247.5	1452115
+library_trim_q95	246215	gse246215_nsclc_library_trim_q95_seed246215	NSCLC	60	11	11	13172.6166666667	13319	21784
+library_trim_q95	246215	gse246215_tnbc_library_trim_q95_seed246215	TNBC	60	6	8	5250.55	4247	16926

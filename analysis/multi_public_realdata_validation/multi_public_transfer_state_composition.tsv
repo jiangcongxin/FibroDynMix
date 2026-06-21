@@ -1,0 +1,13 @@
+heldout_dataset_id	heldout_condition	state	transferred_composition	pooled_fit_composition
+dryad_mt3_caf	disease	resident	0.518041967728779	0.0865097068334597
+dryad_mt3_caf	disease	inflammatory	0.14804939484526	0.0214378448913934
+dryad_mt3_caf	disease	myofibroblast	0.0107860337121187	0.25207752367869
+dryad_mt3_caf	disease	ECM-remodeling	0.277412055775461	0.566334557906656
+dryad_mt3_caf	disease	antigen-presenting	0.017221045395612	0.0565835014372917
+dryad_mt3_caf	disease	IFN-stress	0.0284895025427692	0.0170568652525086
+dryad_normal_mammary_fibroblast	normal	resident	0.484715815998444	0.466081802519436
+dryad_normal_mammary_fibroblast	normal	inflammatory	0.211892210624021	0.207231831988712
+dryad_normal_mammary_fibroblast	normal	myofibroblast	0.143579718811799	0.0444533139115506
+dryad_normal_mammary_fibroblast	normal	ECM-remodeling	0.0297509964257797	0.116530025332214
+dryad_normal_mammary_fibroblast	normal	antigen-presenting	0.0500316240670046	0.103259002981963
+dryad_normal_mammary_fibroblast	normal	IFN-stress	0.0800296340729517	0.0624440232661246

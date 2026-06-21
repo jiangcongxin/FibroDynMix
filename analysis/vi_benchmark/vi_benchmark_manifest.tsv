@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	n_rows	n_vi_rows	mean_vi_interval_coverage	mean_vi_interval_width	mean_vi_calibrated_interval_coverage	mean_vi_calibrated_interval_width	mean_vi_rmse
+vi_benchmark	FibroDynMix VI benchmark quantifies posterior interval coverage and state recovery under simulated latent truth.	Simulation calibration of the lightweight logistic-normal posterior; not full real-human atlas validation or fully hierarchical VI.	12	6	0.276041666666667	0.168546539953738	0.924479166666667	0.844389778944622	0.20189202286126

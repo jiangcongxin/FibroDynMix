@@ -1,0 +1,50 @@
+url: ~
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [search]
+
+reference:
+  - title: Simulation and Benchmarking
+    contents:
+      - simulate_fibrodynmix
+      - run_simulation_benchmark
+      - summarize_benchmark_results
+      - run_marker_scoring_benchmark
+      - score_marker_baseline
+      - evaluate_state_weights
+      - evaluate_marker_recovery
+      - evaluate_transition_detection
+  - title: Negative-Binomial Model
+    contents:
+      - fibrodynmix_nb_loglik
+      - fibrodynmix_nb_deviance
+      - fibrodynmix_nb_objective
+      - fit_fibrodynmix_initializer
+      - fit_fibrodynmix_nb
+      - summarize_optimizer_diagnostics
+  - title: Real Data and Transfer
+    contents:
+      - prepare_fibrodynmix_data
+      - fit_fibrodynmix_prepared
+      - fit_fibrodynmix_transfer
+      - run_cross_cohort_transfer_benchmark
+  - title: Uncertainty and VI
+    contents:
+      - bootstrap_fibrodynmix
+      - summarize_bootstrap_uncertainty
+      - fit_fibrodynmix_vi
+      - evaluate_posterior_intervals
+      - calibrate_posterior_interval_scale
+  - title: Transition and Plasticity
+    contents:
+      - compute_state_cost
+      - estimate_transition_flow
+      - compute_fpi
+  - title: Calibration
+    contents:
+      - run_study_effect_sensitivity
+      - select_study_effect_penalty

@@ -1,0 +1,29 @@
+item	status	evidence
+R CMD check	pass_when_last_run	R CMD check --no-manual reported Status: OK in the latest validation run.
+Unit tests	pass_when_last_run	testthat::test_local() reported all tests passing in the latest validation run.
+Integrity gate	pass_when_last_run	scripts/check_project_integrity.R reported project integrity passed.
+Function documentation	complete	NAMESPACE exports and man/*.Rd files are indexed in exported_function_index.tsv.
+Citation metadata	complete	inst/CITATION
+Release notes	complete	NEWS.md
+Figure source data	complete	figures/*/panel_source_data_manifest.tsv and figures/*/source_data
+Public data claim boundary	bounded	figure manifests and public real-data docs state smoke-test boundaries.
+Multi-public real-data validation	complete_bounded	analysis/multi_public_realdata_validation and docs/multi-public-realdata-validation.md
+Independent human GEO validation	complete_bounded	analysis/independent_geo_gse246215_validation and docs/independent-geo-gse246215-validation.md
+Independent human donor perturbation validation	complete_bounded	analysis/independent_geo_gse167339_validation and docs/independent-geo-gse167339-validation.md
+GSE167339 donor robustness	complete_bounded	analysis/gse167339_donor_robustness and docs/gse167339-donor-robustness.md
+Bioinformatics validation	complete_bounded	analysis/bioinformatics_validation and docs/bioinformatics-validation.md
+GSE246215 sensitivity and QC	complete_bounded	analysis/gse246215_sensitivity and docs/gse246215-sensitivity.md
+Extended method benchmark	complete_bounded	analysis/extended_method_benchmark and docs/extended-method-benchmark.md
+Validation-aware NB selection	complete_bounded	analysis/validation_aware_nb_selection and R/nb_model_selection.R
+scVI-inclusive core benchmark	complete_bounded	analysis/core_converged_method_benchmark_scvi_r5 and R/scvi_baseline.R
+Marker stress benchmark	complete_bounded	analysis/marker_stress_benchmark and docs/marker-stress-benchmark.md
+Independent fibroblast dataset screening	complete_bounded	analysis/independent_fibroblast_dataset_screening and docs/iscience-method-biological-execution.md
+Figure 5 external biological validation	complete_bounded	figures/figure5 and docs/figure5-external-validation.md
+Selected-NB final summaries	complete_bounded	analysis/selected_nb_final_summaries and docs/selected-nb-final-summaries.md
+Reproducibility audit	complete_bounded	analysis/reproducibility_audit and docs/reproducibility-runbook.md
+Runtime and dependency lock	complete_bounded	analysis/runtime_lock and docs/package-runtime-lock.md
+VI calibration claim boundary	bounded	docs/vi-posterior.md and analysis/vi_benchmark state simulation-calibration boundary.
+Remaining atlas-level validation	remaining	Completed human disease-atlas and cross-atlas generalization remain outside current evidence.
+Manuscript skeleton	complete	docs/manuscript-skeleton-isci-commbio.md
+Reviewer risk matrix	complete	docs/reviewer-risk-matrix.md
+Manuscript draft	complete	docs/manuscript-draft-isci-commbio.md

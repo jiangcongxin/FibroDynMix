@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig1_model_nodes.tsv; source_data/fig1_model_edges.tsv	FibroDynMix connects raw counts, NB likelihood, latent state weights, study/donor adjustment, marker orientation, uncertainty, and flow readouts.
+B	source_data/fig1_likelihood_terms.tsv	The model is framed around raw-count likelihood inference rather than normalized marker scoring alone.
+C	source_data/fig1_evidence_map.tsv	Each main result is paired with a bounded interpretation before biological claims are made.
+D	source_data/fig1_figure_inventory.tsv	Supported claims, bounded interpretations, and not-claimed endpoints are explicitly separated.

@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	source_doi	n_cells	n_genes	objective_improvement	transition_converged
+Figure 2	FibroDynMix runs on a balanced public raw-count fibroblast subset and yields coherent state composition, FPI, and cross-sectional transition-flow readouts.	Public mouse pooled-count demonstration; not a disease-mechanism result without full QC, replicated donors, and validation.	10.6071/M3238R	600	1217	0.0900298597756815	TRUE

@@ -1,0 +1,5 @@
+method	feature_type	aggregation_col	n_observations	n_evaluated	n_classes	n_folds	status	accuracy	balanced_accuracy	macro_f1	macro_auroc
+topic_nmf_z	topic_composition	SampleID	30	30	4	2	ok	0.766666666666667	0.808379120879121	0.803571428571428	0.838980472851956
+marker_scoring_z	state_composition	SampleID	30	30	4	2	ok	0.6	0.676167582417582	0.568181818181818	0.770423909530367
+fibrodynmix_z	state_composition	SampleID	30	30	4	2	ok	0.566666666666667	0.610576923076923	0.764102564102564	0.815359392845007
+marker_scoring_scores	marker_scores	SampleID	30	30	4	2	ok	0.533333333333333	0.417239010989011	0.575757575757576	0.675712235334997

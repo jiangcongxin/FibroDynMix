@@ -1,0 +1,6 @@
+nb_n_outer	scenario	rmse_rank	method	rmse_mean	dominant_accuracy_mean	downstream_balanced_accuracy_mean	downstream_macro_f1_mean
+10	batch_confounding	1	fibrodynmix_initializer	0.168238377636135	0.51	0.885	0.884974119176815
+10	batch_confounding	2	marker_scoring	0.169925759760678	0.505	0.885	0.884997124928123
+10	batch_confounding	3	fibrodynmix_nb	0.183465273349762	0.445	0.895	0.894976369683179
+10	batch_confounding	4	fibrodynmix_nb_study	0.19404358099078	0.35	0.77	0.76997699769977
+10	batch_confounding	5	topic_nmf	0.215694586730818	0.26	0.93	0.93

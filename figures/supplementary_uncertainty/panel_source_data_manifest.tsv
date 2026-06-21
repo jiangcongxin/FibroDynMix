@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig5_sample_composition_uncertainty.tsv	Sample-level fibroblast state composition can be summarized with bootstrap intervals.
+B	source_data/fig5_entropy_uncertainty.tsv	Cells with higher entropy show quantifiable uncertainty in entropy estimates.
+C	source_data/fig5_marker_program_stability.tsv	State-gene program stability is summarized by bootstrap intervals on |beta|.
+D	source_data/fig5_uncertainty_vs_entropy.tsv	State-weight interval width is evaluated against mixed-state entropy.

@@ -1,0 +1,2 @@
+n_cells	n_genes	n_states	initial_objective	best_objective	final_objective	objective_improvement	best_iteration	executed_iterations	stop_reason	fit_study_effect	fit_donor_effect	study_effect_l2_norm	donor_effect_l2_norm
+600	1217	6	1.94997632395988	1.85994646418419	1.85994646418419	0.0900298597756815	2	2	max_iterations	TRUE	FALSE	1.57277815124756	NA

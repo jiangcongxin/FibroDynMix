@@ -1,0 +1,25 @@
+dataset_id	study_id	donor_id	condition	organism	tissue	state	composition	mean_entropy
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	resident	0.275123300713376	1.14520268413148
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	inflammatory	0.0667394953063288	1.14520268413148
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	myofibroblast	0.168783458040885	1.14520268413148
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	ECM-remodeling	0.291476574609837	1.14520268413148
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	antigen-presenting	0.125020734816639	1.14520268413148
+gse246215_gc_fibroblast	GSE246215_GC	GSE246215_GC_multi_patient	disease	Homo sapiens	Gastric cancer (GC)	IFN-stress	0.0728564365129351	1.14520268413148
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	resident	0.0330874063467688	0.283969343065835
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	inflammatory	0.00686578032788919	0.283969343065835
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	myofibroblast	0.911706868165619	0.283969343065835
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	ECM-remodeling	0.0240460378908877	0.283969343065835
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	antigen-presenting	0.0109380176855763	0.283969343065835
+gse246215_hcc_fibroblast	GSE246215_HCC	GSE246215_HCC_multi_patient	disease	Homo sapiens	Hepatocellular carcinoma (HCC)	IFN-stress	0.0133558895832585	0.283969343065835
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	resident	0.0554479514636183	0.783972996101413
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	inflammatory	0.0901782460644203	0.783972996101413
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	myofibroblast	0.110092219795186	0.783972996101413
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	ECM-remodeling	0.661855704051971	0.783972996101413
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	antigen-presenting	0.0132316800193771	0.783972996101413
+gse246215_nsclc_fibroblast	GSE246215_NSCLC	GSE246215_NSCLC_multi_patient	disease	Homo sapiens	Non-small-cell lung cancer (NSCLC)	IFN-stress	0.0691941986054269	0.783972996101413
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	resident	0.216251018247879	1.09059467350561
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	inflammatory	0.183875290833103	1.09059467350561
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	myofibroblast	0.261978233719375	1.09059467350561
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	ECM-remodeling	0.21574475866054	1.09059467350561
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	antigen-presenting	0.0405469346630851	1.09059467350561
+gse246215_tnbc_fibroblast	GSE246215_TNBC	GSE246215_TNBC_multi_patient	disease	Homo sapiens	Triple-negative breast cancer (TNBC)	IFN-stress	0.0816037638760176	1.09059467350561

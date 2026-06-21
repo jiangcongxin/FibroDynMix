@@ -1,0 +1,3 @@
+dataset_id	condition	n_cells	mean_library_size	median_library_size	mean_state_entropy	dominant_state_fraction
+dryad_mt3_caf	disease	160	5854.11875	6203	0.788979417173212	0.566334557906656
+dryad_normal_mammary_fibroblast	normal	160	5490.13125	5873	1.07328384869403	0.466081802519436

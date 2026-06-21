@@ -1,0 +1,2 @@
+panel	source_data	claim
+A	source_data/fig1_redesign_components.tsv	FibroDynMix links raw UMI counts to a negative-binomial likelihood, latent simplex state weights, study/donor adjustment, marker orientation, and bounded cross-sectional readouts.

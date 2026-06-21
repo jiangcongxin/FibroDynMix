@@ -1,0 +1,7 @@
+scenario	method	n_replicates	n_nb_runs	objective_improvement_mean	objective_improvement_sd	rollback_rate	rollback_count_mean	study_effect_l2_norm_mean	donor_effect_l2_norm_mean	early_stopping_rate	median_best_iteration	median_executed_iterations
+continuous	fibrodynmix_nb	2	2	0.0762698024866312	0.000699529125217813	0	0	NA	NA	0	2	2
+continuous	fibrodynmix_vi	2	2	0.0762703430406251	0.0006940219264968	0	0	NA	NA	0	2	2
+batch_confounding	fibrodynmix_nb	2	2	0.0780784328069287	0.00754583317594406	0	0	NA	NA	0	2	2
+batch_confounding	fibrodynmix_vi	2	2	0.0780769969175675	0.00754702799175202	0	0	NA	NA	0	2	2
+rare_transition	fibrodynmix_nb	2	2	0.0811814993315567	0.000166937492122176	0	0	NA	NA	0	2	2
+rare_transition	fibrodynmix_vi	2	2	0.081195155554174	0.000162304116579581	0	0	NA	NA	0	2	2

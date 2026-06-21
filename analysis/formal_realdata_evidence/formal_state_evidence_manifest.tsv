@@ -1,0 +1,2 @@
+analysis	datasets	n_state_rows	n_supported_rows	n_exploratory_rows	max_median_bootstrap_sd	max_nb_transfer_p90_cell_z_sd	n_pathway_rows_q10	generated_at
+formal_realdata_evidence	GSE163973,GSE243716	12	6	6	0.00793367184226327	0.120569641934732	10	2026-06-06 21:46:42.181092

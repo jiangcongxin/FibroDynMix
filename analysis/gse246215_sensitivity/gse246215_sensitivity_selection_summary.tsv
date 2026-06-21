@@ -1,0 +1,17 @@
+sensitivity_mode	seed	dataset_id	cancer_type_short	n_selected_cells	n_patients	n_samples	mean_library_size	median_library_size	max_library_size
+raw_sample	246215	gse246215_gc_raw_sample_seed246215	GC	60	7	7	6495.48333333333	5939.5	25299
+raw_sample	246215	gse246215_hcc_raw_sample_seed246215	HCC	60	2	2	1086256.35	1087937.5	1812448
+raw_sample	246215	gse246215_nsclc_raw_sample_seed246215	NSCLC	60	10	10	11683.45	9965.5	24304
+raw_sample	246215	gse246215_tnbc_raw_sample_seed246215	TNBC	60	6	8	6708.11666666667	5176.5	34765
+raw_sample	246216	gse246215_gc_raw_sample_seed246216	GC	60	7	7	7641.55	5727	64025
+raw_sample	246216	gse246215_hcc_raw_sample_seed246216	HCC	60	2	2	1034407.98333333	1014945	1554433
+raw_sample	246216	gse246215_nsclc_raw_sample_seed246216	NSCLC	60	13	13	11829.6166666667	11278.5	23403
+raw_sample	246216	gse246215_tnbc_raw_sample_seed246216	TNBC	60	6	8	6274.61666666667	4645	31071
+library_trim_q95	246215	gse246215_gc_library_trim_q95_seed246215	GC	60	7	7	6372.5	6037.5	15290
+library_trim_q95	246215	gse246215_hcc_library_trim_q95_seed246215	HCC	60	2	2	1035707.55	1025247.5	1452115
+library_trim_q95	246215	gse246215_nsclc_library_trim_q95_seed246215	NSCLC	60	11	11	13172.6166666667	13319	21784
+library_trim_q95	246215	gse246215_tnbc_library_trim_q95_seed246215	TNBC	60	6	8	5250.55	4247	16926
+library_trim_q95	246216	gse246215_gc_library_trim_q95_seed246216	GC	60	7	7	6643.43333333333	5929	18093
+library_trim_q95	246216	gse246215_hcc_library_trim_q95_seed246216	HCC	60	2	2	1061700.05	1085055	1452115
+library_trim_q95	246216	gse246215_nsclc_library_trim_q95_seed246216	NSCLC	60	13	13	12126.8666666667	11848	22110
+library_trim_q95	246216	gse246215_tnbc_library_trim_q95_seed246216	TNBC	60	6	8	5918.16666666667	4937.5	16986

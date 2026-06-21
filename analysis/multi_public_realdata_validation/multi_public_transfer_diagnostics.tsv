@@ -1,0 +1,3 @@
+heldout_dataset_id	heldout_condition	training_dataset_ids	n_train_cells	n_heldout_cells	n_train_datasets	n_shared_genes	train_initial_objective	train_best_objective	train_stop_reason	transfer_nb_objective	transfer_nb_loglik	transfer_converged	transfer_z_convergence_rate	transfer_n_nonconverged_cells	mean_transfer_entropy
+dryad_mt3_caf	disease	dryad_normal_mammary_fibroblast	160	160	1	719	2.17871353198495	2.03241784850021	max_iterations	2.88119418395886	-331452.578922627	TRUE	1	0	0.841932596202905
+dryad_normal_mammary_fibroblast	normal	dryad_mt3_caf	160	160	1	719	2.21983936948297	2.09672886677051	max_iterations	2.60054301435369	-299166.468371248	TRUE	1	0	1.21362525956004

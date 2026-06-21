@@ -1,0 +1,73 @@
+scenario	replicate	method	marker_auprc	scenario_label
+continuous	1	fibrodynmix_initializer	0.691490571434568	Continuous
+mixture
+discrete	1	fibrodynmix_initializer	0.841287445033283	Discrete
+states
+batch_confounding	1	fibrodynmix_initializer	0.652793790753578	Batch
+confounding
+rare_transition	1	fibrodynmix_initializer	0.728371649003068	Rare
+transition
+continuous	2	fibrodynmix_initializer	0.721208694865815	Continuous
+mixture
+discrete	2	fibrodynmix_initializer	0.812043393273311	Discrete
+states
+batch_confounding	2	fibrodynmix_initializer	0.718269695575086	Batch
+confounding
+rare_transition	2	fibrodynmix_initializer	0.819483513165578	Rare
+transition
+continuous	3	fibrodynmix_initializer	0.64964218282438	Continuous
+mixture
+discrete	3	fibrodynmix_initializer	0.813221850716646	Discrete
+states
+batch_confounding	3	fibrodynmix_initializer	0.70544540982004	Batch
+confounding
+rare_transition	3	fibrodynmix_initializer	0.767966597537001	Rare
+transition
+continuous	1	fibrodynmix_nb	0.434813001431298	Continuous
+mixture
+discrete	1	fibrodynmix_nb	0.623062790635904	Discrete
+states
+batch_confounding	1	fibrodynmix_nb	0.4644214847231	Batch
+confounding
+rare_transition	1	fibrodynmix_nb	0.490694388031002	Rare
+transition
+continuous	2	fibrodynmix_nb	0.513848463855985	Continuous
+mixture
+discrete	2	fibrodynmix_nb	0.588146198781683	Discrete
+states
+batch_confounding	2	fibrodynmix_nb	0.428951851289087	Batch
+confounding
+rare_transition	2	fibrodynmix_nb	0.509768023967585	Rare
+transition
+continuous	3	fibrodynmix_nb	0.415035808322906	Continuous
+mixture
+discrete	3	fibrodynmix_nb	0.632826047763991	Discrete
+states
+batch_confounding	3	fibrodynmix_nb	0.46897084677572	Batch
+confounding
+rare_transition	3	fibrodynmix_nb	0.466256485632323	Rare
+transition
+continuous	1	fibrodynmix_vi	0.434834770849619	Continuous
+mixture
+discrete	1	fibrodynmix_vi	0.623062790635904	Discrete
+states
+batch_confounding	1	fibrodynmix_vi	0.4644214847231	Batch
+confounding
+rare_transition	1	fibrodynmix_vi	0.490694388031002	Rare
+transition
+continuous	2	fibrodynmix_vi	0.513815784117423	Continuous
+mixture
+discrete	2	fibrodynmix_vi	0.588146198781683	Discrete
+states
+batch_confounding	2	fibrodynmix_vi	0.428677632264868	Batch
+confounding
+rare_transition	2	fibrodynmix_vi	0.509768023967585	Rare
+transition
+continuous	3	fibrodynmix_vi	0.415337740690056	Continuous
+mixture
+discrete	3	fibrodynmix_vi	0.632826047763991	Discrete
+states
+batch_confounding	3	fibrodynmix_vi	0.46897084677572	Batch
+confounding
+rare_transition	3	fibrodynmix_vi	0.46629065524936	Rare
+transition

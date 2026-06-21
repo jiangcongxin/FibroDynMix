@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	n_modes	n_seeds	n_runs	min_transfer_z_convergence_rate	mean_objective_improvement	max_composition_sd
+gse246215_sensitivity	GSE246215 human fibroblast validation was stress-tested across random downsampling seeds and library-size trimming.	Sensitivity analysis uses sampled processed public count matrices from one GEO study; it evaluates computational robustness and library-size QC sensitivity, not definitive cancer-type biology.	2	2	4	0.983333333333333	0.252085478520973	0.0419683040172541

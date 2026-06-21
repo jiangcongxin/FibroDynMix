@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	selected_study_l2	selected_marker_l2
+Figure 4	A two-dimensional penalty grid selects a study-effect and marker-orientation setting that balances state recovery and study-effect shrinkage.	Simulation calibration only; not universal hyperparameter proof.	5	0.05

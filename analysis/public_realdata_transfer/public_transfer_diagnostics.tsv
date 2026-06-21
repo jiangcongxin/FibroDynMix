@@ -1,0 +1,3 @@
+train_condition	heldout_condition	n_train_cells	n_heldout_cells	n_genes	n_shared_genes	train_initial_objective	train_best_objective	train_final_objective	train_stop_reason	transfer_nb_objective	transfer_nb_loglik	transfer_converged	transfer_z_convergence_rate	transfer_n_nonconverged_cells	mean_transfer_entropy
+disease	normal	160	160	720	720	2.24287590040861	2.13465497961506	2.13465497961506	max_iterations	2.4874954004925	-286559.470136736	TRUE	1	0	1.17935950526726
+normal	disease	160	160	720	720	2.09683004969175	1.94552446343306	1.94552446343306	max_iterations	2.9778224606885	-343045.147471315	TRUE	0.99375	1	0.952451464849414

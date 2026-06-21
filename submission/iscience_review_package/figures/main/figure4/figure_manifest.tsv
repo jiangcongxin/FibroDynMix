@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	selected_study_l2	selected_marker_l2
+Figure 4	Simulation calibration identifies a ridge-penalized study-effect setting that balances state-mixture recovery, raw-count fit, and study-effect shrinkage under batch confounding.	Simulation-calibrated penalty selection under batch confounding; not a real-cohort biological claim or universal hyperparameter proof.	5	0.05

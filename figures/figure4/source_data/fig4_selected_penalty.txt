@@ -1,0 +1,3 @@
+recommended_study_l2: 5
+recommended_marker_l2: 0.05
+selection_reason: Selected study_l2=5 and marker_l2=0.05 using weighted tradeoff score 0.111; RMSE 0.1892 is within the 5.0% tolerance around best RMSE 0.1892, and NB objective 1.2691 is within the 3.0% tolerance around best objective 1.2648.

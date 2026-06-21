@@ -1,0 +1,6 @@
+panel	source_data	claim
+A	source_data/fig3_redesign_core_summary.tsv	Mean state-weight RMSE is summarized across methods and known-truth simulation scenarios.
+B	source_data/fig3_redesign_core_summary.tsv	State recovery is compared against downstream balanced accuracy and dominant-state accuracy.
+C	source_data/fig3_redesign_entropy_sample.tsv	Entropy calibration is shown in selected continuous-mixture and rare-transition scenarios.
+D	source_data/fig3_redesign_marker_summary.tsv	Marker-program recovery is quantified by AUPRC across scenarios.
+E	source_data/fig3_redesign_transition_scores.tsv	Rare-transition cells show elevated entropy signal relative to other cells in the rare-transition simulation.

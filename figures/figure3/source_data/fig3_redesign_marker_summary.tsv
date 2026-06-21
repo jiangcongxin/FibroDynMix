@@ -1,0 +1,13 @@
+scenario_label	method	marker_auprc
+Continuous	fibrodynmix_initializer	0.687447149708254
+Discrete	fibrodynmix_initializer	0.822184229674413
+Batch	fibrodynmix_initializer	0.692169632049568
+Rare	fibrodynmix_initializer	0.771940586568549
+Continuous	fibrodynmix_nb	0.454565757870063
+Discrete	fibrodynmix_nb	0.614678345727193
+Batch	fibrodynmix_nb	0.454114727595969
+Rare	fibrodynmix_nb	0.488906299210303
+Continuous	fibrodynmix_vi	0.454662765219033
+Discrete	fibrodynmix_vi	0.614678345727193
+Batch	fibrodynmix_vi	0.454023321254563
+Rare	fibrodynmix_vi	0.488917689082649

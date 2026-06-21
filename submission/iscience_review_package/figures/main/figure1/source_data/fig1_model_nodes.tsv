@@ -1,0 +1,15 @@
+id	label	role	x	y	w	h
+counts	Raw UMI
+counts	input	0.11	0.66	0.18	0.13
+nb	NB count
+likelihood	likelihood	0.35	0.66	0.2	0.13
+simplex	Simplex state
+weights	latent	0.59	0.66	0.2	0.13
+outputs	State summaries
+and flow	output	0.84	0.66	0.21	0.13
+study	Study/donor
+adjustment	adjustment	0.35	0.38	0.2	0.13
+markers	Weak marker
+orientation	prior	0.59	0.38	0.2	0.13
+uncertainty	Uncertainty
+intervals	uncertainty	0.84	0.38	0.21	0.13

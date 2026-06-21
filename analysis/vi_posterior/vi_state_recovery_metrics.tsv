@@ -1,0 +1,6 @@
+metric	value
+rmse	0.172211969302484
+mean_absolute_error	0.130739542813403
+dominant_accuracy	0.28125
+mean_entropy_true	1.45628523883898
+mean_entropy_pred	1.39866070209611

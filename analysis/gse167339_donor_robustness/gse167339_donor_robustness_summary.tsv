@@ -1,0 +1,4 @@
+donor_id	n_conditions	n_cells	mean_entropy	has_normal	has_disease	has_hash_unknown	disease_minus_normal_l1	hash_minus_known_l1
+Human1	2	240	1.14654364986837	TRUE	TRUE	FALSE	0.405850972986023	NA
+Human2	2	320	0.958254813697274	TRUE	TRUE	FALSE	0.386224043997369	NA
+Human3	1	320	1.05930241099941	FALSE	FALSE	TRUE	NA	NA

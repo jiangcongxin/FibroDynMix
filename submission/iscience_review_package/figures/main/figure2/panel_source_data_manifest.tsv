@@ -1,0 +1,8 @@
+panel	source_data	claim
+A	source_data/fig2_condition_cell_counts.tsv	The public demonstration uses a balanced normal/disease raw-count subset.
+B	source_data/fig2_nb_objective.tsv	The NB objective improves during the public-data fit.
+C	source_data/fig2_state_composition_delta.tsv	Disease-minus-normal state shifts summarize fitted composition differences.
+D	source_data/fig2_state_composition.tsv	Condition-level state composition is estimated from latent mixture weights.
+E	source_data/fig2_cell_fpi.tsv	Cell-level FPI summarizes mixed-state entropy and transition potential.
+F	source_data/fig2_transition_flow.tsv; source_data/fig2_transition_summary.tsv	Cross-sectional state flow is inferred from fitted compositions and state-program cost.
+G	source_data/fig2_cell_state_weight_heatmap.tsv; source_data/fig2_cell_order_condition_annotation.tsv	Condition-ordered cell-level latent mixtures show continuous rather than purely discrete state assignments.

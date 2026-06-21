@@ -1,0 +1,5 @@
+panel	source_data	claim
+A	source_data/fig4_study_effect_tradeoff.tsv; source_data/fig4_no_study_baseline_summary.tsv	State-weight RMSE varies with study-effect and marker-orientation penalties.
+B	source_data/fig4_study_effect_tradeoff.tsv; source_data/fig4_no_study_baseline_summary.tsv	Raw-count objective quantifies likelihood tradeoff relative to no-study-effect NB.
+C	source_data/fig4_study_effect_tradeoff.tsv	Study-effect magnitude decreases as the ridge penalty increases.
+D	source_data/fig4_study_effect_tradeoff.tsv; source_data/fig4_selected_penalty.txt	The selected penalty balances RMSE, objective degradation, study-effect magnitude, and rollback frequency.

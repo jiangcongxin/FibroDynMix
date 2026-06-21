@@ -1,0 +1,2 @@
+n_datasets	n_conditions	n_cells	n_genes	n_states	initial_objective	best_objective	final_objective	objective_improvement	best_iteration	executed_iterations	stop_reason	fit_study_effect	fit_donor_effect	mean_transfer_z_convergence_rate	min_transfer_z_convergence_rate
+4	1	240	621	6	3.78151781115157	3.54030482630984	3.54030482630984	0.241212984841735	1	2	max_iterations	TRUE	FALSE	0.995833333333333	0.983333333333333

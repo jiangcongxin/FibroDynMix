@@ -1,0 +1,3 @@
+dataset_id	study_id	donor_id	condition	organism	tissue	counts_path	public_record	download_url
+dryad_mt3_caf	Dryad_MT3_CAF	MT3_CAF_pool	disease	Mus musculus	breast_tumor	/Volumes/bioSSD/RCode/FibroDynMix/data/public_dryad_breast_fibroblast/MT3_CAFs_raw.txt	https://datadryad.org/dataset/doi:10.6071/M3238R	https://zenodo.org/api/records/3977255/files/MT3_CAFs_raw.txt/content
+dryad_normal_mammary_fibroblast	Dryad_normal_mammary	normal_mammary_pool	normal	Mus musculus	normal_mammary_gland	/Volumes/bioSSD/RCode/FibroDynMix/data/public_dryad_breast_fibroblast/Normal_mammary_fibroblasts_raw.txt	https://datadryad.org/dataset/doi:10.6071/M3238R	https://zenodo.org/api/records/3977255/files/Normal_mammary_fibroblasts_raw.txt/content

@@ -1,0 +1,4 @@
+panel	source_data	claim
+A	source_data/fig4_redesign_tradeoff.tsv	The two-dimensional penalty grid summarizes the selection score across study-effect and marker-orientation penalties.
+B	source_data/fig4_redesign_tradeoff.tsv	State-weight RMSE improves as study-effect shrinkage strengthens in the selected marker-penalty branch.
+C	source_data/fig4_redesign_tradeoff.tsv	Study-effect L2 norm decreases as ridge penalty increases.

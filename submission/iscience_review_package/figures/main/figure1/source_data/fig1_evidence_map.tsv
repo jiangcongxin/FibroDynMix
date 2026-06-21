@@ -1,0 +1,7 @@
+figure	evidence_type	result	boundary	y
+Fig. 2	public_data	Public raw-count run: NB fit, composition, FPI, and cross-sectional flow.	Feasibility demonstration, not a disease-mechanism result.	6
+Fig. 3	simulation	Known-truth simulations: state-weight, dominant-state, entropy, transition, and marker recovery.	Computational recovery benchmark, not patient-tissue causality.	5
+Fig. 4	simulation	Study-effect calibration: regularization tradeoff for cohort/donor adjustment.	Calibration readout, not universal hyperparameter proof.	4
+Fig. 5	uncertainty	Transfer and bootstrap summaries: external state recovery with interval-aware reporting.	Transfer evidence with finite public cohorts.	3
+Fig. 6	public_data	Cross-sectional flow summaries: state-linked disease shifts without causal timing claims.	Association-style flow, not longitudinal transition.	2
+Supp.	boundary	Claim boundaries: model validation, uncertainty, and biological interpretation remain separated.	Defines what is supported now versus left open.	1

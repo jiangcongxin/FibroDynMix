@@ -1,0 +1,3 @@
+file	condition	study_id	donor_id	download_url
+MT3_CAFs_raw.txt	disease	Dryad_MT3_CAF	MT3_CAF_pool	https://zenodo.org/api/records/3977255/files/MT3_CAFs_raw.txt/content
+Normal_mammary_fibroblasts_raw.txt	normal	Dryad_normal_mammary	normal_mammary_pool	https://zenodo.org/api/records/3977255/files/Normal_mammary_fibroblasts_raw.txt/content

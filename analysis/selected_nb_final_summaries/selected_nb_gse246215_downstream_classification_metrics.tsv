@@ -1,0 +1,5 @@
+method	feature_type	aggregation_col	n_observations	n_evaluated	n_classes	n_folds	status	accuracy	balanced_accuracy	macro_f1	macro_auroc	selected_n_outer
+topic_nmf_z	topic_composition	PatientID	28	28	4	2	ok	0.75	0.809981684981685	0.802083333333333	0.862407235621521	2
+marker_scoring_z	state_composition	PatientID	28	28	4	2	ok	0.642857142857143	0.707417582417582	0.613068181818182	0.780310166024452	2
+fibrodynmix_z	state_composition	PatientID	28	28	4	2	ok	0.571428571428571	0.631410256410256	0.758518518518518	0.814119808762666	2
+marker_scoring_scores	marker_scores	PatientID	28	28	4	2	ok	0.5	0.391941391941392	0.521789321789322	0.687492269635127	2

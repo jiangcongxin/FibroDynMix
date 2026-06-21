@@ -1,0 +1,2 @@
+analysis	claim_boundary	n_replicates	n_holdout_rows	mean_transfer_rmse	mean_transfer_dominant_accuracy	mean_transfer_z_convergence_rate
+cross_cohort_transfer	Leave-study-out simulation transfer benchmark; not full real-human cross-cohort atlas validation.	2	6	0.20870327706041	0.416666666666667	1

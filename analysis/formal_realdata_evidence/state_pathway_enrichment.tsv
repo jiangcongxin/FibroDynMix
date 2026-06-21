@@ -1,0 +1,73 @@
+state	pathway	n_program_genes	n_pathway_genes	n_overlap	overlap_genes	p_value	q_value	dataset
+resident	ECM_organization	40	13	0		1	1	GSE163973
+resident	TGF_beta_contractile	40	11	0		1	1	GSE163973
+resident	Interferon_response	40	10	0		1	1	GSE163973
+resident	Antigen_presentation	40	9	1	HLA-C	0.016262009527912	0.0975720571674721	GSE163973
+resident	Cytokine_chemokine	40	9	1	CXCL14	0.016262009527912	0.0975720571674721	GSE163973
+resident	Resident_matrix_homeostasis	40	8	4	DCN;PI16;FBLN2;FBLN1	6.54423350883409e-10	1.17796203159014e-08	GSE163973
+inflammatory	ECM_organization	40	13	0		1	1	GSE163973
+inflammatory	TGF_beta_contractile	40	11	0		1	1	GSE163973
+inflammatory	Interferon_response	40	10	0		1	1	GSE163973
+inflammatory	Antigen_presentation	40	9	0		1	1	GSE163973
+inflammatory	Cytokine_chemokine	40	9	2	CCL2;CXCL2	0.000115304719178302	0.00103774247260472	GSE163973
+inflammatory	Resident_matrix_homeostasis	40	8	0		1	1	GSE163973
+myofibroblast	ECM_organization	40	13	0		1	1	GSE163973
+myofibroblast	TGF_beta_contractile	40	11	0		1	1	GSE163973
+myofibroblast	Interferon_response	40	10	0		1	1	GSE163973
+myofibroblast	Antigen_presentation	40	9	0		1	1	GSE163973
+myofibroblast	Cytokine_chemokine	40	9	0		1	1	GSE163973
+myofibroblast	Resident_matrix_homeostasis	40	8	0		1	1	GSE163973
+ECM-remodeling	ECM_organization	40	13	8	COL3A1;COL1A1;SPARC;COL1A2;COL5A1;COL6A1;MMP2;POSTN	7.2847156880087e-20	2.62249764768313e-18	GSE163973
+ECM-remodeling	TGF_beta_contractile	40	11	0		1	1	GSE163973
+ECM-remodeling	Interferon_response	40	10	0		1	1	GSE163973
+ECM-remodeling	Antigen_presentation	40	9	0		1	1	GSE163973
+ECM-remodeling	Cytokine_chemokine	40	9	0		1	1	GSE163973
+ECM-remodeling	Resident_matrix_homeostasis	40	8	2	COL14A1;LUM	8.97848671964736e-05	0.00103774247260472	GSE163973
+antigen-presenting	ECM_organization	40	13	0		1	1	GSE163973
+antigen-presenting	TGF_beta_contractile	40	11	0		1	1	GSE163973
+antigen-presenting	Interferon_response	40	10	0		1	1	GSE163973
+antigen-presenting	Antigen_presentation	40	9	0		1	1	GSE163973
+antigen-presenting	Cytokine_chemokine	40	9	0		1	1	GSE163973
+antigen-presenting	Resident_matrix_homeostasis	40	8	0		1	1	GSE163973
+IFN-stress	ECM_organization	40	13	0		1	1	GSE163973
+IFN-stress	TGF_beta_contractile	40	11	0		1	1	GSE163973
+IFN-stress	Interferon_response	40	10	0		1	1	GSE163973
+IFN-stress	Antigen_presentation	40	9	0		1	1	GSE163973
+IFN-stress	Cytokine_chemokine	40	9	0		1	1	GSE163973
+IFN-stress	Resident_matrix_homeostasis	40	8	0		1	1	GSE163973
+resident	ECM_organization	40	9	1	TIMP1	0.45687461823725	1	GSE243716
+resident	TGF_beta_contractile	40	5	0		1	1	GSE243716
+resident	Interferon_response	40	7	0		1	1	GSE243716
+resident	Antigen_presentation	40	5	0		1	1	GSE243716
+resident	Cytokine_chemokine	40	7	0		1	1	GSE243716
+resident	Resident_matrix_homeostasis	40	7	1	PI16	0.377467650462188	1	GSE243716
+inflammatory	ECM_organization	40	9	0		1	1	GSE243716
+inflammatory	TGF_beta_contractile	40	5	0		1	1	GSE243716
+inflammatory	Interferon_response	40	7	0		1	1	GSE243716
+inflammatory	Antigen_presentation	40	5	0		1	1	GSE243716
+inflammatory	Cytokine_chemokine	40	7	0		1	1	GSE243716
+inflammatory	Resident_matrix_homeostasis	40	7	0		1	1	GSE243716
+myofibroblast	ECM_organization	40	9	1	TIMP1	0.45687461823725	1	GSE243716
+myofibroblast	TGF_beta_contractile	40	5	4	MYL9;ACTA2;TPM2;TAGLN	7.42427783574911e-05	0.00066818500521742	GSE243716
+myofibroblast	Interferon_response	40	7	0		1	1	GSE243716
+myofibroblast	Antigen_presentation	40	5	0		1	1	GSE243716
+myofibroblast	Cytokine_chemokine	40	7	0		1	1	GSE243716
+myofibroblast	Resident_matrix_homeostasis	40	7	0		1	1	GSE243716
+ECM-remodeling	ECM_organization	40	9	6	COL1A1;COL1A2;COL3A1;FN1;POSTN;LOX	3.83150976620575e-06	6.89671757917034e-05	GSE243716
+ECM-remodeling	TGF_beta_contractile	40	5	0		1	1	GSE243716
+ECM-remodeling	Interferon_response	40	7	0		1	1	GSE243716
+ECM-remodeling	Antigen_presentation	40	5	0		1	1	GSE243716
+ECM-remodeling	Cytokine_chemokine	40	7	0		1	1	GSE243716
+ECM-remodeling	Resident_matrix_homeostasis	40	7	5	DPT;FBLN1;LUM;DCN;PDGFRA	1.75086669559216e-05	0.00021010400347106	GSE243716
+antigen-presenting	ECM_organization	40	9	0		1	1	GSE243716
+antigen-presenting	TGF_beta_contractile	40	5	0		1	1	GSE243716
+antigen-presenting	Interferon_response	40	7	0		1	1	GSE243716
+antigen-presenting	Antigen_presentation	40	5	5	CD74;HLA-DRA;HLA-DRB1;HLA-DPA1;HLA-DPB1	9.19731596995761e-07	3.31103374918474e-05	GSE243716
+antigen-presenting	Cytokine_chemokine	40	7	0		1	1	GSE243716
+antigen-presenting	Resident_matrix_homeostasis	40	7	0		1	1	GSE243716
+IFN-stress	ECM_organization	40	9	0		1	1	GSE243716
+IFN-stress	TGF_beta_contractile	40	5	0		1	1	GSE243716
+IFN-stress	Interferon_response	40	7	0		1	1	GSE243716
+IFN-stress	Antigen_presentation	40	5	0		1	1	GSE243716
+IFN-stress	Cytokine_chemokine	40	7	0		1	1	GSE243716
+IFN-stress	Resident_matrix_homeostasis	40	7	0		1	1	GSE243716

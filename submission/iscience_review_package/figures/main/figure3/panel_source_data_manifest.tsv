@@ -1,0 +1,6 @@
+panel	source_data	claim
+A	source_data/fig3_panel_a_true_composition.tsv	Benchmark scenarios provide known latent state mixtures for recovery evaluation.
+B-C	source_data/fig3_benchmark_metrics.tsv; source_data/fig3_benchmark_summary.tsv	State-weight and dominant-state recovery are quantified against known truth, including the VI posterior mean.
+D	source_data/fig3_panel_d_entropy_calibration.tsv; source_data/fig3_panel_d_entropy_summary.tsv	Mixed-state entropy preservation is summarized as absolute error against true latent entropy.
+E	source_data/fig3_panel_e_transition_scores.tsv	Rare transition-like cells are evaluated using simulator truth labels, with entropy used only as a detection score.
+F	source_data/fig3_panel_f_marker_recovery.tsv; source_data/fig3_panel_f_marker_recovery_summary.tsv	Initializer, NB-optimized, and VI-backed state-gene programs are evaluated against true marker assignments.

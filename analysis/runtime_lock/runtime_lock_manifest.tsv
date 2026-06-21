@@ -1,0 +1,2 @@
+analysis	primary_claim	claim_boundary	r_version	n_locked_packages	n_missing_suggests	n_external_sources	all_external_files_present	n_heavy_analysis_contracts	generated_at
+runtime_lock	FibroDynMix has a package-level runtime, dependency, public-data, and heavy-analysis I/O lock suitable for handoff and review.	This is a package-level runtime snapshot and analysis contract, not a full renv.lock or container image.	R version 4.6.0 (2026-04-24)	14	0	3	TRUE	17	2026-06-06 19:37:48.67367

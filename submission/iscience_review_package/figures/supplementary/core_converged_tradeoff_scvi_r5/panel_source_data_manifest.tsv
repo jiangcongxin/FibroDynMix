@@ -1,0 +1,3 @@
+panel	source_data	claim
+A	source_data/objective_rmse_tradeoff_points.tsv	scVI-inclusive core benchmark points compare NB objective, latent-state RMSE, and downstream utility for NB-family methods across scenarios and n_outer settings.
+B	source_data/objective_rmse_tradeoff_pairs.tsv	Paired n_outer 10-to-20 contrasts in the scVI-inclusive run show that objective improvement alone is not a reliable selector for latent-state recovery.

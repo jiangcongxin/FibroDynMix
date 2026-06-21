@@ -1,0 +1,22 @@
+source_state	target_state	cost	relative_affinity	source_idx	target_idx	keep	diag_label
+resident	resident	0	32.9770601406514	1	1	TRUE	Resident
+inflammatory	resident	25.1559558330164	-0.53872251762786	5	1	TRUE	
+myofibroblast	resident	24.5111678496711	0.320341397650131	2	1	TRUE	
+ECM-remodeling	resident	24.5619376907558	0.252699723818086	6	1	TRUE	
+antigen-presenting	resident	25.2241278398058	-0.629549444583006	3	1	TRUE	
+IFN-stress	resident	25.5021770772472	-1	4	1	TRUE	
+inflammatory	inflammatory	0	32.9770601406514	5	5	TRUE	Inflamm.
+ECM-remodeling	inflammatory	24.2314684488137	0.692990498762163	6	5	TRUE	
+inflammatory	myofibroblast	24.7352192346296	0.0218332601577008	5	2	TRUE	
+myofibroblast	myofibroblast	0	32.9770601406514	2	2	TRUE	MyoFB
+ECM-remodeling	myofibroblast	25.1509871749606	-0.532102675209355	6	2	TRUE	
+antigen-presenting	myofibroblast	25.267283141174	-0.687046114986238	3	2	TRUE	
+IFN-stress	myofibroblast	24.6448808023058	0.142192958813251	4	2	TRUE	
+ECM-remodeling	ECM-remodeling	0	32.9770601406514	6	6	TRUE	ECM
+inflammatory	antigen-presenting	24.4633159754732	0.384095405887941	5	3	TRUE	
+ECM-remodeling	antigen-presenting	25.1244806324492	-0.496787478930125	6	3	TRUE	
+antigen-presenting	antigen-presenting	0	32.9770601406514	3	3	TRUE	AP
+IFN-stress	antigen-presenting	24.7516066343755	0	4	3	TRUE	
+inflammatory	IFN-stress	24.6438409171617	0.143578418571192	5	4	TRUE	
+ECM-remodeling	IFN-stress	24.7725562722525	-0.0279116211888771	6	4	TRUE	
+IFN-stress	IFN-stress	0	32.9770601406514	4	4	TRUE	IFN

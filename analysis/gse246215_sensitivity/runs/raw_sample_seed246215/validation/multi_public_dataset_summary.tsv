@@ -1,0 +1,5 @@
+dataset_id	condition	n_cells	mean_library_size	median_library_size	mean_state_entropy	dominant_state_fraction
+gse246215_gc_raw_sample_seed246215	disease	60	3938.4	3580	1.18033909657105	0.295290837631563
+gse246215_hcc_raw_sample_seed246215	disease	60	444124	453116	0.269704909767622	0.903166213814292
+gse246215_nsclc_raw_sample_seed246215	disease	60	6850.08333333333	5854.5	0.685910903175975	0.681272619460203
+gse246215_tnbc_raw_sample_seed246215	disease	60	3971.95	2996.5	1.09356459640691	0.25672858504584

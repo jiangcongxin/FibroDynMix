@@ -1,0 +1,6 @@
+scenario	method	n_replicates	rmse_mean	rmse_sd	mean_absolute_error_mean	mean_absolute_error_sd	dominant_accuracy_mean	dominant_accuracy_sd	mean_entropy_pred_mean	mean_entropy_pred_sd	downstream_balanced_accuracy_mean	downstream_balanced_accuracy_sd	downstream_macro_f1_mean	downstream_macro_f1_sd	downstream_macro_auroc_mean	downstream_macro_auroc_sd	nb_n_outer
+batch_confounding	marker_scoring	1	0.169925759760678	NA	0.122060728897934	NA	0.505	NA	1.6844317637217	NA	0.885	NA	0.884997124928123	NA	0.87565	NA	10
+batch_confounding	topic_nmf	1	0.215694586730818	NA	0.157807430595115	NA	0.26	NA	1.41285069895774	NA	0.93	NA	0.93	NA	0.81875	NA	10
+batch_confounding	fibrodynmix_initializer	1	0.168238377636135	NA	0.120210551630954	NA	0.51	NA	1.64027296557564	NA	0.885	NA	0.884974119176815	NA	0.8855	NA	10
+batch_confounding	fibrodynmix_nb	1	0.183465273349762	NA	0.134451164566942	NA	0.445	NA	1.53218401937269	NA	0.895	NA	0.894976369683179	NA	0.83865	NA	10
+batch_confounding	fibrodynmix_nb_study	1	0.19404358099078	NA	0.141694487300896	NA	0.35	NA	1.53939261803503	NA	0.77	NA	0.76997699769977	NA	0.66815	NA	10

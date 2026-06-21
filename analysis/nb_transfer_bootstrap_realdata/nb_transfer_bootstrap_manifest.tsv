@@ -1,0 +1,2 @@
+analysis	datasets	bootstrap_n	max_train_cells	max_eval_cells	max_model_genes	maxit_beta	maxit_fit_z	maxit_transfer_z	median_transfer_convergence_rate	min_transfer_convergence_rate	max_state_p90_cell_z_sd	generated_at
+nb_transfer_bootstrap_realdata	GSE163973,GSE243716	5	140	120	450	15	15	100	0.979166666666667	0.916666666666667	0.120569641934732	2026-06-06 21:45:22.648756

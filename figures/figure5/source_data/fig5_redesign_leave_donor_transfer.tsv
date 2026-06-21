@@ -1,0 +1,4 @@
+heldout_donor_id	heldout_conditions	training_donor_ids	n_train_cells	n_heldout_cells	n_train_donors	n_heldout_datasets	n_shared_genes	train_initial_objective	train_best_objective	train_stop_reason	transfer_nb_objective	transfer_nb_loglik	transfer_converged	transfer_z_convergence_rate	transfer_n_nonconverged_cells	mean_transfer_entropy
+Human1	disease;normal	Human2;Human3	640	240	2	3	720	2.70761878938054	2.34126500603768	max_iterations	2.23227516203413	-385737.147999498	TRUE	1	0	1.0291851960702
+Human2	disease;normal	Human1;Human3	560	320	2	4	720	2.6272182648806	2.3516731687118	max_iterations	2.28397148267427	-526227.029608152	TRUE	1	0	1.04644964998006
+Human3	hash_unknown	Human1;Human2	560	320	2	4	720	2.50328737619738	2.18578398657862	max_iterations	2.67112355406725	-615426.866857094	TRUE	0.978125	7	1.12196292498098

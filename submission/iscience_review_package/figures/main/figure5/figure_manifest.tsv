@@ -1,0 +1,2 @@
+figure	primary_claim	claim_boundary	source_datasets	generated_at
+Figure 5	Independent public fibroblast datasets provide bounded external reproducibility and descriptive disease-context biological-utility evidence for FibroDynMix state compositions and transfer diagnostics.	External public-data validation using bounded sampled/capped outputs. GSE167339 Human3 hash groups support donor robustness only; GSE156326/GSE181316 module contrasts are descriptive small-sample pseudobulk effects and do not pass FDR significance.	GSE167339;GSE156326;GSE181316	2026-06-15 14:41:43.936917

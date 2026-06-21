@@ -1,0 +1,5 @@
+sensitivity_mode	seed	n_public_datasets	n_cells	n_genes	initial_objective	best_objective	objective_improvement	mean_transfer_z_convergence_rate	min_transfer_z_convergence_rate	run_dir
+raw_sample	246215	4	240	621	3.78151781115157	3.54030482630984	0.241212984841735	0.995833333333333	0.983333333333333	/Volumes/bioSSD/RCode/FibroDynMix/analysis/gse246215_sensitivity/runs/raw_sample_seed246215/validation
+raw_sample	246216	4	240	622	3.80413856387827	3.55247186412592	0.251666699752349	1	1	/Volumes/bioSSD/RCode/FibroDynMix/analysis/gse246215_sensitivity/runs/raw_sample_seed246216/validation
+library_trim_q95	246215	4	240	622	3.82217609794222	3.54927706137737	0.272899036564857	1	1	/Volumes/bioSSD/RCode/FibroDynMix/analysis/gse246215_sensitivity/runs/library_trim_q95_seed246215/validation
+library_trim_q95	246216	4	240	622	3.80992419539897	3.56736100247402	0.242563192924952	1	1	/Volumes/bioSSD/RCode/FibroDynMix/analysis/gse246215_sensitivity/runs/library_trim_q95_seed246216/validation
