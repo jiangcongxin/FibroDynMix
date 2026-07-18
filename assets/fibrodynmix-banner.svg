@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="FibroDynMix — hierarchical Bayesian dynamic mixture model of fibroblast state plasticity">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#101c0c"/>
+      <stop offset="1" stop-color="#0c150a"/>
+    </linearGradient>
+    <style>
+      .eyebrow { font: 600 12px "Avenir Next", "Helvetica Neue", Arial, sans-serif; fill: #d2d8d0; opacity: .72; letter-spacing: 3.5px; }
+      .bio { font: 300 26px "Avenir Next", "Helvetica Neue", Arial, sans-serif; fill: #f6f6f4; opacity: .88; letter-spacing: -0.4px; }
+      .name { font: 300 84px "Avenir Next", "Helvetica Neue", Arial, sans-serif; fill: #f6f6f4; letter-spacing: -2px; }
+      .tag { font: 600 12px Menlo, Consolas, monospace; fill: #d2d8d0; opacity: .8; letter-spacing: 2px; }
+      .meta { font: 500 11px Menlo, Consolas, monospace; fill: #f6f6f4; opacity: .42; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+
+  <g transform="translate(56 0)">
+    <rect x="0" y="58" width="36" height="3" fill="#778652"/>
+    <text class="eyebrow" x="0" y="92">R PACKAGE · HIERARCHICAL BAYESIAN DYNAMIC MIXTURE MODEL</text>
+    <text class="bio" x="0" y="136">Fibroblast state plasticity, modeled end to end —</text>
+    <text class="bio" x="0" y="170">simulator, NB optimizer, VI posterior, cross-cohort transfer.</text>
+  </g>
+
+  <line x1="56" y1="212" x2="1144" y2="212" stroke="#f6f6f4" stroke-opacity="0.14" stroke-width="1"/>
+
+  <g transform="translate(56 0)">
+    <text class="meta" x="0" y="250">RAW-COUNT NB LIKELIHOOD — LOGISTIC-NORMAL STATES — SEURAT LAYER</text>
+    <text class="tag" x="0" y="298">[SIMULATOR]&#160;&#160;[BENCHMARK]&#160;&#160;[TRANSFER]&#160;&#160;[VI POSTERIOR]</text>
+  </g>
+
+  <text class="name" x="1144" y="300" text-anchor="end">FibroDynMix</text>
+</svg>
