@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/fibrodynmix-banner.svg" alt="FibroDynMix — hierarchical Bayesian dynamic mixture model of fibroblast state plasticity" width="100%">
+</p>
+
 # FibroDynMix
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20787527.svg)](https://doi.org/10.5281/zenodo.20787527)
@@ -191,7 +195,7 @@ results <- run_simulation_benchmark(
     donors_per_study = 4,
     cells_per_donor = 100,
     n_genes = 1000,
-    marker_genes_per_state = 30
+    marker_genes_per_state = 20
   ),
   initializer_args = list(
     n_iter = 10
@@ -222,7 +226,7 @@ The initializer can now be scored under the raw-count NB objective:
 ```r
 fit <- fit_fibrodynmix_initializer(
   counts = sim$counts,
-  marker_index = sim$parameters$marker_index,
+  marker_index = sim$marker_index,
   library_size = sim$cell_metadata$library_size,
   n_iter = 10
 )
