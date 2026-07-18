@@ -195,7 +195,7 @@ results <- run_simulation_benchmark(
     donors_per_study = 4,
     cells_per_donor = 100,
     n_genes = 1000,
-    marker_genes_per_state = 20
+    marker_genes_per_state = 30
   ),
   initializer_args = list(
     n_iter = 10
@@ -226,7 +226,7 @@ The initializer can now be scored under the raw-count NB objective:
 ```r
 fit <- fit_fibrodynmix_initializer(
   counts = sim$counts,
-  marker_index = sim$marker_index,
+  marker_index = sim$parameters$marker_index,
   library_size = sim$cell_metadata$library_size,
   n_iter = 10
 )
