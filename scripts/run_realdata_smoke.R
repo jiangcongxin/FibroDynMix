@@ -26,6 +26,7 @@ ROOT <- normalizePath(file.path(dirname(script_path), ".."))
 source_package_files <- function(root) {
   r_files <- c(
     "simulate_fibrodynmix.R",
+    "matrix_utils.R",
     "baseline_marker_scoring.R",
     "benchmark_metrics.R",
     "fibrodynmix_initializer.R",
