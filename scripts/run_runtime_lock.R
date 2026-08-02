@@ -25,19 +25,28 @@ collapse_paths <- function(paths) {
 }
 
 description <- read.dcf(file.path(ROOT, "DESCRIPTION"))[1, ]
-suggests_raw <- unname(description[["Suggests"]])
-suggest_pkgs <- trimws(unlist(strsplit(gsub("\n", " ", suggests_raw), ",")))
-suggest_pkgs <- sub("\\s*\\(.*\\)$", "", suggest_pkgs)
-suggest_pkgs <- suggest_pkgs[nzchar(suggest_pkgs)]
-runtime_pkgs <- unique(c("R", suggest_pkgs))
+parse_dependency_field <- function(field) {
+  raw <- unname(description[[field]])
+  packages <- trimws(unlist(strsplit(gsub("\n", " ", raw), ",")))
+  packages <- sub("\\s*\\(.*\\)$", "", packages)
+  unique(packages[nzchar(packages)])
+}
+import_pkgs <- parse_dependency_field("Imports")
+suggest_pkgs <- parse_dependency_field("Suggests")
+dependency_pkgs <- unique(c(import_pkgs, suggest_pkgs))
+dependency_fields <- c(
+  setNames(rep("Imports", length(import_pkgs)), import_pkgs),
+  setNames(rep("Suggests", length(suggest_pkgs)), suggest_pkgs)
+)
+runtime_pkgs <- c("R", dependency_pkgs)
 
 package_lock <- data.frame(
   package = runtime_pkgs,
-  dependency_field = c("runtime", rep("Suggests", length(suggest_pkgs))),
-  installed = c(TRUE, vapply(suggest_pkgs, requireNamespace, logical(1), quietly = TRUE)),
+  dependency_field = c("runtime", unname(dependency_fields[dependency_pkgs])),
+  installed = c(TRUE, vapply(dependency_pkgs, requireNamespace, logical(1), quietly = TRUE)),
   version = c(
     paste(R.version$major, R.version$minor, sep = "."),
-    vapply(suggest_pkgs, function(pkg) {
+    vapply(dependency_pkgs, function(pkg) {
       if (requireNamespace(pkg, quietly = TRUE)) {
         as.character(utils::packageVersion(pkg))
       } else {
@@ -45,10 +54,14 @@ package_lock <- data.frame(
       }
     }, character(1))
   ),
-  source = c("base R runtime", rep("DESCRIPTION", length(suggest_pkgs))),
+  source = c("base R runtime", rep("DESCRIPTION", length(dependency_pkgs))),
   required_for = c(
     "package tests, analysis scripts, and R CMD check",
-    rep("optional benchmark, public data, single-cell container, and test workflows", length(suggest_pkgs))
+    ifelse(
+      unname(dependency_fields[dependency_pkgs]) == "Imports",
+      "required package functionality",
+      "optional benchmark, public data, single-cell container, and test workflows"
+    )
   ),
   stringsAsFactors = FALSE
 )

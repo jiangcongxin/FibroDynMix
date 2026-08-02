@@ -1,3 +1,16 @@
+# FibroDynMix 0.1.0
+
+## Release preparation
+
+- Promoted the documented development build to the 0.1.0 release candidate.
+- Aligned package authorship and citation metadata with the manuscript author
+  order: Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang.
+- Restored direct execution of analysis scripts by loading the shared matrix
+  utilities before their use.
+- Added a reproducible iScience submission-package builder that keeps the
+  final manuscript, figure suite, manifests, and quality-control record
+  synchronized while preserving author-controlled declarations.
+
 # FibroDynMix 0.0.0.9000
 
 ## Major Changes

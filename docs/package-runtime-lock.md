@@ -162,11 +162,11 @@ Rscript scripts/run_project_maturity_audit.R
 Rscript scripts/check_project_integrity.R
 Rscript -e 'testthat::test_local()'
 R CMD build .
-R CMD check --no-manual FibroDynMix_0.0.0.9000.tar.gz
+R CMD check --no-manual FibroDynMix_0.1.0.tar.gz
 ```
 
 Then remove generated check artifacts:
 
 ```bash
-rm -rf FibroDynMix.Rcheck FibroDynMix_0.0.0.9000.tar.gz Rplots.pdf .DS_Store tests/testthat/_snaps
+rm -rf FibroDynMix.Rcheck FibroDynMix_0.1.0.tar.gz Rplots.pdf .DS_Store tests/testthat/_snaps
 ```

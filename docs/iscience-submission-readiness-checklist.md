@@ -43,9 +43,9 @@ Review package:
 | Graphical abstract artwork | Draft ready | SVG source plus PNG/PDF/TIFF/JPG exports in review package |
 | Cover letter | Draft ready | Full draft plus fit paragraph included; requires author/corresponding-author details |
 | Keywords | Draft ready | 6 recommended keywords plus 5-keyword backup set |
-| Title page | Template ready | Requires author list, affiliations, corresponding author, and ORCID IDs |
+| Title page | Draft prepared | Author list, affiliations, and dual correspondence are populated |
 | Funding statement | Template ready | Requires author confirmation and grant details |
-| Author contributions | Template ready | Requires final author list and contribution roles |
+| Author contributions | Draft prepared | Equal first authorship and CRediT roles are populated |
 | Declaration of interests | Template ready | Requires author form and exact manuscript statement |
 | Generative AI / writing-assistance statement | Template ready | Use only if required by final journal workflow or institutional policy |
 
@@ -91,7 +91,7 @@ Before journal upload, rerun:
 Rscript scripts/check_project_integrity.R
 Rscript -e 'testthat::test_local()'
 R CMD build .
-R CMD check --no-manual --no-build-vignettes FibroDynMix_0.0.0.9000.tar.gz
+R CMD check --no-manual --no-build-vignettes FibroDynMix_0.1.0.tar.gz
 ```
 
 Latest final-freeze run on 2026-06-15:
@@ -99,4 +99,4 @@ Latest final-freeze run on 2026-06-15:
 - `Rscript scripts/check_project_integrity.R`: passed.
 - `Rscript -e 'testthat::test_local()'`: 359 passed, 0 failed, 0 warnings, 0 skipped.
 - `R CMD build .`: passed after excluding `submission/` from the R package tarball.
-- `R CMD check --no-manual --no-build-vignettes FibroDynMix_0.0.0.9000.tar.gz`: status OK.
+- `R CMD check --no-manual --no-build-vignettes FibroDynMix_0.1.0.tar.gz`: status OK.

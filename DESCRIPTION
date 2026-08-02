@@ -1,10 +1,16 @@
 Package: FibroDynMix
 Title: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R:
-    person("FibroDynMix", "Developers", email = "dev@example.com", role = c("aut", "cre"))
-Author: FibroDynMix Developers [aut, cre]
-Maintainer: FibroDynMix Developers <dev@example.com>
+    c(
+        person("Ying", "Jiang", role = "aut"),
+        person("Guiqiang", "Li", role = "aut"),
+        person("Xiaodong", "Chen", email = "cxd234@163.com", role = "aut"),
+        person("Jingru", "Wang", email = "lllittlejing@163.com", role = c("aut", "cre"))
+    )
+Author: Ying Jiang [aut], Guiqiang Li [aut], Xiaodong Chen [aut],
+    Jingru Wang [aut, cre]
+Maintainer: Jingru Wang <lllittlejing@163.com>
 Description: Simulation and modeling utilities for FibroDynMix, a
     hierarchical negative-binomial generative framework for fibroblast
     state mixtures, cohort effects, marker-program recovery, and transition

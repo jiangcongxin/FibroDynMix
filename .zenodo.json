@@ -2,9 +2,20 @@
   "creators": [
     {
       "name": "Jiang, Ying"
+    },
+    {
+      "name": "Li, Guiqiang"
+    },
+    {
+      "name": "Chen, Xiaodong"
+    },
+    {
+      "name": "Wang, Jingru"
     }
   ],
-  "description": "Public archive release for the FibroDynMix R package, manuscript source data, figures, analysis manifests, and iScience review package.",
+  "description": "Release archive for the FibroDynMix R package and reproducible computational resources used to generate its documented simulations, analyses, figures, and source-data manifests. Public count matrices remain available from their original repositories.",
   "license": "MIT",
-  "title": "FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity"
+  "title": "FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity",
+  "upload_type": "software",
+  "version": "0.1.0"
 }
