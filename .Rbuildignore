@@ -12,6 +12,7 @@
 ^Rplots\.pdf$
 ^\.DS_Store$
 ^.*/\.DS_Store$
+^\.git$
 ^\.kunsdd$
 ^\.zenodo\.json$
 ^cran-comments\.md$

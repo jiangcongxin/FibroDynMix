@@ -19,15 +19,13 @@ Public archive:
 
 ## Authors
 
-Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang. Jingru Wang is the
-package maintainer (lllittlejing@163.com).
+Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang. Ying Jiang is the
+package maintainer (96768072+jiangcongxin@users.noreply.github.com).
 
 Package-facing resources:
 
 - Function index: `docs/package-function-index.md`
 - Model and simulation specification: `docs/model-and-simulation-spec.md`
-- JTM pathological scar translational subproject:
-  `projects/jtm_pathological_scar_fibroblast_states/README.md`
 - VI posterior and calibration: `docs/vi-posterior.md`
 - Independent GSE167339 human validation: `docs/independent-geo-gse167339-validation.md`
 - GSE167339 donor robustness: `docs/gse167339-donor-robustness.md`
