@@ -6,14 +6,20 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20787527.svg)](https://doi.org/10.5281/zenodo.20787527)
 
-FibroDynMix is a work-in-progress R package for a hierarchical Bayesian
-dynamic mixture model of fibroblast state plasticity.
+FibroDynMix is an R package for a hierarchical Bayesian dynamic mixture model
+of fibroblast state plasticity.
 
 Public archive:
 
 - GitHub repository: https://github.com/jiangcongxin/FibroDynMix
-- Zenodo DOI: https://doi.org/10.5281/zenodo.20787527
-- Latest archived creator metadata: `Jiang, Ying`
+- Existing project archive DOI: https://doi.org/10.5281/zenodo.20787527
+- Each formal release records its own Git tag and permanent archive DOI; the
+  badge above must not be read as an archive of an unreleased local worktree.
+
+## Authors
+
+Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang. Jingru Wang is the
+package maintainer (lllittlejing@163.com).
 
 Package-facing resources:
 
@@ -29,6 +35,7 @@ Package-facing resources:
 - Visualization API: `docs/visualization-api.md`
 - Engineering quality gates: `docs/engineering-quality-gates.md`
 - Package runtime/dependency lock: `docs/package-runtime-lock.md`
+- Release authority: `docs/release-authority.md`
 - Release notes: `NEWS.md`
 - Citation metadata: `inst/CITATION`
 
@@ -530,3 +537,8 @@ flow <- estimate_transition_flow(
 
 fpi <- compute_fpi(fit$z_hat, flow = flow$flow)
 ```
+
+## License
+
+Copyright (c) 2026 Ying Jiang (江颖). FibroDynMix is distributed under the MIT
+License; see `LICENSE`.

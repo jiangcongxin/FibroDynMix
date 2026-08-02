@@ -15,13 +15,13 @@ Rscript scripts/run_runtime_lock.R
 Rscript scripts/check_project_integrity.R
 Rscript -e 'testthat::test_local()'
 R CMD build .
-R CMD check --no-manual FibroDynMix_0.0.0.9000.tar.gz
+R CMD check --no-manual FibroDynMix_0.1.0.tar.gz
 ```
 
 Remove generated check artifacts after validation:
 
 ```bash
-rm -rf FibroDynMix.Rcheck FibroDynMix_0.0.0.9000.tar.gz Rplots.pdf
+rm -rf FibroDynMix.Rcheck FibroDynMix_0.1.0.tar.gz Rplots.pdf
 ```
 
 ## Heavy Research Analyses

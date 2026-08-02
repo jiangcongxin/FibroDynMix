@@ -96,7 +96,7 @@ The build-package check completed with `Status: OK`:
 
 ```bash
 R CMD build .
-R CMD check --no-manual --no-build-vignettes --no-multiarch FibroDynMix_0.0.0.9000.tar.gz
+R CMD check --no-manual --no-build-vignettes --no-multiarch FibroDynMix_0.1.0.tar.gz
 ```
 
 The project-local scVI virtual environment and local analysis/data folders are

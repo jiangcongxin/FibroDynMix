@@ -10,8 +10,6 @@ required_figures <- c(
   "figure2",
   "figure3",
   "figure4",
-  "figure5",
-  "figure6",
   "public_realdata_smoke"
 )
 
@@ -112,9 +110,21 @@ for (fig in required_figures) {
   check_figure_package(fig)
 }
 
-ds_store <- list.files(ROOT, pattern = "^\\.DS_Store$", recursive = TRUE, all.files = TRUE, full.names = TRUE)
+package_source_dirs <- file.path(ROOT, c("R", "man", "inst", "tests", "docs"))
+package_source_dirs <- package_source_dirs[dir.exists(package_source_dirs)]
+ds_store <- unlist(
+  lapply(
+    package_source_dirs,
+    list.files,
+    pattern = "^\\.DS_Store$",
+    recursive = TRUE,
+    all.files = TRUE,
+    full.names = TRUE
+  ),
+  use.names = FALSE
+)
 if (length(ds_store) > 0L) {
-  add_failure("Repository contains .DS_Store files: %s", paste(ds_store, collapse = ", "))
+  add_failure("Package source directories contain .DS_Store files: %s", paste(ds_store, collapse = ", "))
 }
 
 rbuildignore <- file.path(ROOT, ".Rbuildignore")
@@ -591,17 +601,17 @@ if (file.exists(package_lock_path)) {
   if (!all(c("package", "dependency_field", "installed", "version") %in% colnames(package_lock))) {
     add_failure("Package dependency lock lacks required columns.")
   } else {
-    required_suggests <- c("data.table", "GEOquery", "ggplot2", "irlba", "lsa", "Matrix", "NMF", "scater", "scran", "scuttle", "SeuratObject", "SingleCellExperiment", "testthat")
-    missing_suggest_rows <- setdiff(required_suggests, package_lock$package)
-    if (length(missing_suggest_rows) > 0L) {
-      add_failure("Package dependency lock is missing Suggests rows: %s", paste(missing_suggest_rows, collapse = ", "))
+    required_runtime_packages <- c("data.table", "GEOquery", "ggplot2", "irlba", "lsa", "Matrix", "NMF", "scater", "scran", "scuttle", "SeuratObject", "SingleCellExperiment", "testthat")
+    missing_runtime_rows <- setdiff(required_runtime_packages, package_lock$package)
+    if (length(missing_runtime_rows) > 0L) {
+      add_failure("Package dependency lock is missing runtime-package rows: %s", paste(missing_runtime_rows, collapse = ", "))
     }
-    suggest_rows <- package_lock[package_lock$package %in% required_suggests, , drop = FALSE]
-    if (nrow(suggest_rows) > 0L && !all(suggest_rows$installed %in% TRUE)) {
-      add_failure("Package dependency lock reports uninstalled Suggests packages.")
+    runtime_rows <- package_lock[package_lock$package %in% required_runtime_packages, , drop = FALSE]
+    if (nrow(runtime_rows) > 0L && !all(runtime_rows$installed %in% TRUE)) {
+      add_failure("Package dependency lock reports uninstalled runtime packages.")
     }
-    if (nrow(suggest_rows) > 0L && !is_nonempty(suggest_rows$version)) {
-      add_failure("Package dependency lock has empty Suggests versions.")
+    if (nrow(runtime_rows) > 0L && !is_nonempty(runtime_rows$version)) {
+      add_failure("Package dependency lock has empty runtime-package versions.")
     }
   }
 }

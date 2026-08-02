@@ -15,7 +15,7 @@ Last updated: 2026-06-22.
 | `NEWS.md`, `README.md` | Release notes and package readme |
 | `_pkgdown.yml` | pkgdown site config |
 | `cran-comments.md` | CRAN-style check notes |
-| `FibroDynMix_0.0.0.9000.tar.gz` | Last built package tarball |
+| `FibroDynMix_0.1.0.tar.gz` | Current release-candidate package tarball |
 
 ## Research evidence (build-ignored, but load-bearing for the paper)
 
@@ -33,7 +33,8 @@ Last updated: 2026-06-22.
 
 | Path | What it is |
 |---|---|
-| `submission/iscience_review_package/` | The assembled iScience package: manuscript, figures, frontmatter, cover letter, QC checklist. **Canonical manuscript lives here.** |
+| `submission/iscience_submission_package_final_v4/` | Current synchronized iScience submission-freeze candidate: manuscript, figures, front matter, cover letter, source-data manifests, and QC records. |
+| `submission/iscience_review_package/` | Historical review package; do not mix its files into the current submission candidate. |
 
 ## Scratch / regenerable (moved aside)
 
@@ -44,10 +45,10 @@ Last updated: 2026-06-22.
 
 ## Where to look first
 
-- Want the paper? → `submission/iscience_review_package/`
+- Want the current submission candidate? → `submission/iscience_submission_package_final_v4/`
 - Want to re-run analyses? → `scripts/` + `docs/reproducibility-runbook.md`
 - Want the validation gate? → `scripts/check_project_integrity.R`
-- Submission status? → `submission/iscience_review_package/quality_control/iscience-submission-readiness-checklist.md`
+- Submission status? → `submission/iscience_submission_package_final_v4/08_quality_control/final_freeze_status.md`
 
 ## Note on heavy data
 

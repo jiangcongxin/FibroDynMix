@@ -6,7 +6,7 @@ handoff:
 ```bash
 Rscript -e 'testthat::test_local()'
 Rscript scripts/check_project_integrity.R
-R CMD build . && R CMD check --no-manual FibroDynMix_0.0.0.9000.tar.gz
+R CMD build . && R CMD check --no-manual FibroDynMix_0.1.0.tar.gz
 ```
 
 ## What The Integrity Gate Checks

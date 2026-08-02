@@ -18,7 +18,7 @@ Validation-aware NB selection	complete_bounded	analysis/validation_aware_nb_sele
 scVI-inclusive core benchmark	complete_bounded	analysis/core_converged_method_benchmark_scvi_r5 and R/scvi_baseline.R
 Marker stress benchmark	complete_bounded	analysis/marker_stress_benchmark and docs/marker-stress-benchmark.md
 Independent fibroblast dataset screening	complete_bounded	analysis/independent_fibroblast_dataset_screening and docs/iscience-method-biological-execution.md
-Figure 5 external biological validation	complete_bounded	figures/figure5 and docs/figure5-external-validation.md
+Figure 5 external biological validation	missing	figures/figure5 and docs/figure5-external-validation.md
 Selected-NB final summaries	complete_bounded	analysis/selected_nb_final_summaries and docs/selected-nb-final-summaries.md
 Reproducibility audit	complete_bounded	analysis/reproducibility_audit and docs/reproducibility-runbook.md
 Runtime and dependency lock	complete_bounded	analysis/runtime_lock and docs/package-runtime-lock.md
