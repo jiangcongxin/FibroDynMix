@@ -31,6 +31,7 @@ Package-facing resources:
 - Visualization API: `docs/visualization-api.md`
 - Engineering quality gates: `docs/engineering-quality-gates.md`
 - Package runtime/dependency lock: `docs/package-runtime-lock.md`
+- Release authority: `docs/release-authority.md`
 - Release notes: `NEWS.md`
 - Citation metadata: `inst/CITATION`
 
@@ -532,3 +533,8 @@ flow <- estimate_transition_flow(
 
 fpi <- compute_fpi(fit$z_hat, flow = flow$flow)
 ```
+
+## License
+
+Copyright (c) 2026 Ying Jiang (江颖). FibroDynMix is distributed under the MIT
+License; see `LICENSE`.

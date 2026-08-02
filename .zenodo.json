@@ -13,7 +13,7 @@
       "name": "Wang, Jingru"
     }
   ],
-  "description": "Release archive for the FibroDynMix R package and reproducible computational resources used to generate its documented simulations, analyses, figures, and source-data manifests. Public count matrices remain available from their original repositories.",
+  "description": "Release archive for the FibroDynMix R package and reproducible computational resources used to generate its documented simulations, analyses, figures, and source-data manifests. Copyright (c) 2026 Ying Jiang (江颖); distributed under the MIT License. Public count matrices remain available from their original repositories.",
   "license": "MIT",
   "title": "FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity",
   "upload_type": "software",
