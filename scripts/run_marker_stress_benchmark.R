@@ -9,6 +9,7 @@ dir.create(OUT, recursive = TRUE, showWarnings = FALSE)
 
 source_files <- c(
   "simulate_fibrodynmix.R",
+  "matrix_utils.R",
   "benchmark_metrics.R",
   "baseline_marker_scoring.R",
   "topic_nmf_baseline.R",

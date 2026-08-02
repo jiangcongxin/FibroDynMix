@@ -8,6 +8,7 @@ OUT <- file.path(ROOT, "analysis", "study_effect_sensitivity")
 dir.create(OUT, recursive = TRUE, showWarnings = FALSE)
 
 source(file.path(ROOT, "R", "simulate_fibrodynmix.R"))
+source(file.path(ROOT, "R", "matrix_utils.R"))
 source(file.path(ROOT, "R", "benchmark_metrics.R"))
 source(file.path(ROOT, "R", "baseline_marker_scoring.R"))
 source(file.path(ROOT, "R", "topic_nmf_baseline.R"))

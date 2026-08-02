@@ -21,3 +21,4 @@
 ^.*\.h5ad$
 ^\.venv-scvi$
 ^archive$
+^paper_rewriting_output$
