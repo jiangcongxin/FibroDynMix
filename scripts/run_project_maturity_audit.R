@@ -171,7 +171,7 @@ evidence_matrix <- data.frame(
     "Public analyses are technical smoke tests, not disease-mechanism claims.",
     "Audit checks file presence and metadata coverage; it does not rerun every heavy analysis.",
     "Runtime lock is a package-level snapshot and analysis contract, not a full renv.lock or container image.",
-    "Package is release-candidate version 0.1.0; formal tag, versioned archive, and CRAN/Bioconductor submission remain pending.",
+    "Package version 0.1.0 is formally released (Git tag v0.1.0, commit d945dd1; Zenodo version DOI 10.5281/zenodo.21761171); CRAN/Bioconductor submission remains pending.",
     "Figures are manuscript-facing computational outputs; external biological panels remain bounded public count-matrix validations, not standalone disease-atlas proof."
   ),
   target_relevance = c(
