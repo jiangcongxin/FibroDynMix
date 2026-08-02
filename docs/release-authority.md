@@ -17,9 +17,15 @@ This authorization applies to the FibroDynMix software release. It does not
 alter manuscript authorship, institutional affiliations, or ownership of any
 third-party data and software used by the project.
 
-## Release gate still pending
+## Versioned release record
 
-Before a formal 0.1.0 release, create the versioned Git tag/GitHub Release and
-deposit the final release archive to obtain its permanent DOI. The release must
-include only materials that can be distributed under the stated license or
-their respective third-party terms.
+FibroDynMix v0.1.0 is publicly released at GitHub tag
+[`v0.1.0`](https://github.com/jiangcongxin/FibroDynMix/releases/tag/v0.1.0)
+(commit `d945dd1`) and archived as a fixed Zenodo record at
+[10.5281/zenodo.21761171](https://doi.org/10.5281/zenodo.21761171). The
+project concept DOI,
+[10.5281/zenodo.20787527](https://doi.org/10.5281/zenodo.20787527), resolves
+to the latest FibroDynMix release.
+
+Each future release must include only materials that can be distributed under
+the stated license or their respective third-party terms.

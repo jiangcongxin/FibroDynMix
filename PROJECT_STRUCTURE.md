@@ -1,7 +1,7 @@
 # Project Structure Map
 
 A quick map of what each top-level item is, and what is deliverable vs scratch.
-Last updated: 2026-06-22.
+Last updated: 2026-08-03.
 
 ## R package (the shippable core)
 
@@ -15,7 +15,11 @@ Last updated: 2026-06-22.
 | `NEWS.md`, `README.md` | Release notes and package readme |
 | `_pkgdown.yml` | pkgdown site config |
 | `cran-comments.md` | CRAN-style check notes |
-| `FibroDynMix_0.1.0.tar.gz` | Current release-candidate package tarball |
+
+The released source snapshot is available from the GitHub
+[`v0.1.0` release](https://github.com/jiangcongxin/FibroDynMix/releases/tag/v0.1.0)
+(commit `d945dd1`) and Zenodo version DOI
+[10.5281/zenodo.21761171](https://doi.org/10.5281/zenodo.21761171).
 
 ## Research evidence (build-ignored, but load-bearing for the paper)
 

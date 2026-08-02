@@ -9,5 +9,7 @@ bibentry(
   ),
   year = "2026",
   note = "R package version 0.1.0",
+  doi = "10.5281/zenodo.21761171",
+  url = "https://github.com/jiangcongxin/FibroDynMix/releases/tag/v0.1.0",
   textVersion = "Jiang, Y., Li, G., Chen, X., and Wang, J. (2026). FibroDynMix: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity. R package version 0.1.0."
 )

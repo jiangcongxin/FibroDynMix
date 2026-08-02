@@ -1,8 +1,10 @@
 # FibroDynMix 0.1.0
 
-## Release preparation
+## Release v0.1.0
 
-- Promoted the documented development build to the 0.1.0 release candidate.
+- Released FibroDynMix v0.1.0 (GitHub tag `v0.1.0`, commit `d945dd1`; Zenodo
+  version DOI 10.5281/zenodo.21761171). The concept DOI
+  10.5281/zenodo.20787527 resolves to the latest release.
 - Aligned package authorship and citation metadata with the manuscript author
   order: Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang.
 - Restored direct execution of analysis scripts by loading the shared matrix
