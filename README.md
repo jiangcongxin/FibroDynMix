@@ -17,11 +17,6 @@ Public archive:
 - Fixed v0.1.0 archive DOI: https://doi.org/10.5281/zenodo.21761171
 - Concept DOI for the latest FibroDynMix release: https://doi.org/10.5281/zenodo.20787527
 
-## Authors
-
-Ying Jiang, Guiqiang Li, Xiaodong Chen, and Jingru Wang. Ying Jiang is the
-package maintainer (96768072+jiangcongxin@users.noreply.github.com).
-
 Package-facing resources:
 
 - Function index: `docs/package-function-index.md`
