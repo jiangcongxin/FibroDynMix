@@ -125,6 +125,12 @@ fibrodynmix_nb_deviance <- function(counts,
 #' @param marker_target Optional state-by-gene matrix used as a weak marker
 #'   orientation target for `beta`.
 #' @param marker_l2 Non-negative L2 penalty around `marker_target`.
+#' @param z_l2 Non-negative L2 penalty for reference logits of cell-state
+#'   simplex weights.
+#' @param z_prior Optional fixed logistic-normal prior for reference logits of
+#'   `z`. It must be created with `prepare_logistic_normal_prior()` or
+#'   `estimate_group_logistic_normal_prior()` and have one aligned mean vector
+#'   per cell. Its quadratic term is added on the raw objective scale.
 #' @param effect_l2 Non-negative L2 penalty for study effects and, by default,
 #'   donor effects.
 #' @param donor_effect_l2 Optional non-negative L2 penalty for donor effects. If
@@ -147,6 +153,8 @@ fibrodynmix_nb_objective <- function(counts,
                                      beta_l2 = 0,
                                      marker_target = NULL,
                                      marker_l2 = 0,
+                                     z_l2 = 0,
+                                     z_prior = NULL,
                                      effect_l2 = 0,
                                      donor_effect_l2 = NULL,
                                      average = FALSE) {
@@ -164,6 +172,9 @@ fibrodynmix_nb_objective <- function(counts,
   }
   if (length(marker_l2) != 1L || is.na(marker_l2) || marker_l2 < 0) {
     stop("`marker_l2` must be a non-negative numeric scalar.", call. = FALSE)
+  }
+  if (length(z_l2) != 1L || is.na(z_l2) || z_l2 < 0) {
+    stop("`z_l2` must be a non-negative numeric scalar.", call. = FALSE)
   }
 
   loglik <- fibrodynmix_nb_loglik(
@@ -193,6 +204,25 @@ fibrodynmix_nb_objective <- function(counts,
   }
   if (!is.null(donor_effect)) {
     penalty <- penalty + donor_effect_l2 * sum(as.matrix(donor_effect)^2)
+  }
+  penalty <- penalty + z_l2 * simplex_logit_l2(z)
+  if (!is.null(z_prior)) {
+    z_for_prior <- as.matrix(z)
+    if (is.null(rownames(z_for_prior))) {
+      cell_names <- colnames(counts)
+      if (is.null(cell_names)) {
+        cell_names <- sprintf("cell_%d", seq_len(nrow(z_for_prior)))
+      }
+      rownames(z_for_prior) <- cell_names
+    }
+    if (is.null(colnames(z_for_prior))) {
+      colnames(z_for_prior) <- sprintf("state_%d", seq_len(ncol(z_for_prior)))
+    }
+    z_prior <- validate_logistic_normal_prior_for_simplex(z_prior, z_for_prior)
+    penalty <- penalty + logistic_normal_prior_quadratic(
+      simplex_matrix_to_reference_logits(z_for_prior),
+      z_prior
+    )
   }
 
   objective <- -loglik + penalty

@@ -16,6 +16,8 @@ fibrodynmix_nb_objective(
   beta_l2 = 0,
   marker_target = NULL,
   marker_l2 = 0,
+  z_l2 = 0,
+  z_prior = NULL,
   effect_l2 = 0,
   donor_effect_l2 = NULL,
   average = FALSE
@@ -35,6 +37,12 @@ fibrodynmix_nb_objective(
 \item{beta_l2}{Non-negative L2 penalty for \code{beta}.}
 \item{marker_target}{Optional state-by-gene matrix used as a weak marker orientation target for \code{beta}.}
 \item{marker_l2}{Non-negative L2 penalty around \code{marker_target}.}
+\item{z_l2}{Non-negative L2 penalty for reference logits of cell-state simplex
+weights.}
+\item{z_prior}{Optional fixed logistic-normal prior for reference logits of
+\code{z}. It must be created with \code{prepare_logistic_normal_prior()} or
+\code{estimate_group_logistic_normal_prior()} and have one aligned mean vector
+per cell. Its quadratic term is added on the raw objective scale.}
 \item{effect_l2}{Non-negative L2 penalty for study effects and, by default, donor effects.}
 \item{donor_effect_l2}{Optional non-negative L2 penalty for donor effects. If \code{NULL}, \code{effect_l2} is used.}
 \item{average}{If \code{TRUE}, divide the objective by the number of observed count entries.}

@@ -9,17 +9,22 @@ fit_fibrodynmix_nb(
   study_id = NULL,
   n_outer = 5,
   initializer_args = list(),
+  initial_state = NULL,
   estimate_phi = TRUE,
   phi_init = NULL,
   beta_l2 = 0.01,
   marker_l2 = 0.05,
   marker_weight = NULL,
+  beta_constraint = c("sum_to_zero", "none"),
   fit_study_effect = FALSE,
   study_l2 = 0.1,
   donor_id = NULL,
   fit_donor_effect = FALSE,
   donor_l2 = 0.1,
   z_l2 = 0.001,
+  z_prior = NULL,
+  z_anchor = c("initializer_logit", "none"),
+  z_anchor_sd = 0.1,
   optimizer = c("BFGS", "L-BFGS-B"),
   optimizer_control = list(),
   maxit_beta = 50,
@@ -42,16 +47,34 @@ fit_fibrodynmix_nb(
 \item{donor_id}{Optional cell-level donor identifiers. When supplied with \code{fit_donor_effect = TRUE}, a ridge-penalized donor-by-gene effect is fit.}
 \item{n_outer}{Number of alternating NB optimization iterations.}
 \item{initializer_args}{Named list of arguments passed to \code{fit_fibrodynmix_initializer()}.}
+\item{initial_state}{Optional named list containing \code{z_hat} and \code{beta_hat}
+used as a fixed NB starting state. Supplying it bypasses the randomized
+marker-guided initializer and makes outer-iteration comparisons reproducible.}
 \item{estimate_phi}{Whether to update gene-specific \code{phi} by method-of-moments after each outer iteration.}
 \item{phi_init}{Optional initial gene-specific NB size vector.}
 \item{beta_l2}{Non-negative L2 penalty for state-gene program coefficients.}
 \item{marker_l2}{Non-negative L2 penalty that keeps prior marker coefficients oriented toward positive state-specific programs.}
 \item{marker_weight}{Optional marker reliability weights used by initialization and marker orientation.}
+\item{beta_constraint}{Identification constraint for state-gene programs.
+\code{"sum_to_zero"} fits each gene program in a sum-to-zero contrast space
+and centers the marker target in the same space; \code{"none"} retains the
+legacy unrestricted parameterization.}
 \item{fit_study_effect}{Whether to fit ridge-penalized study-by-gene effects.}
 \item{study_l2}{Non-negative L2 penalty for study effects.}
 \item{fit_donor_effect}{Whether to fit ridge-penalized donor-by-gene effects.}
 \item{donor_l2}{Non-negative L2 penalty for donor effects.}
 \item{z_l2}{Non-negative L2 penalty for cell logits in simplex updates.}
+\item{z_prior}{Optional fixed logistic-normal prior for reference logits of
+cell-state weights. It can be created by
+\code{prepare_logistic_normal_prior()} or
+\code{estimate_group_logistic_normal_prior()}. Supplying this argument
+disables the default \code{z_anchor} unless an anchor is explicitly requested.}
+\item{z_anchor}{Coordinate-stabilization rule. The default
+\code{"initializer_logit"} constructs a cell-specific logistic-normal anchor
+from the marker-guided initialization so NB refinement retains the marker
+state coordinate. \code{"none"} reproduces the legacy unanchored NB update.}
+\item{z_anchor_sd}{Reference-logit standard deviation of the default
+initializer anchor. Smaller values retain the marker coordinate more tightly.}
 \item{optimizer}{Optimizer method passed to \code{optim()} for beta and z updates.}
 \item{optimizer_control}{Additional control list passed to \code{optim()}.}
 \item{maxit_beta}{Maximum \code{optim()} iterations for each gene-level \code{alpha/beta} update.}
@@ -78,5 +101,7 @@ optimization. By default this optimizer estimates
 \code{fit_study_effect = TRUE} or \code{fit_donor_effect = TRUE}, it additionally
 fits ridge-penalized study-by-gene and donor-by-gene effects. This is intended as
 the bridge from the log-normalized initializer toward the full hierarchical
-Bayesian/VI implementation.
+Bayesian/VI implementation. By default, NB refinement uses a tight
+marker-logit anchor so count fitting cannot silently redefine the supplied
+marker state coordinate.
 }

@@ -1,3 +1,16 @@
+# FibroDynMix 0.1.1
+
+## Submission release v0.1.1
+
+- Added fixed cell-specific reference-logit anchoring to preserve a
+  marker-defined simplex coordinate during negative-binomial refinement.
+- Added optional study- and donor-level logistic-normal prior preparation and
+  associated validation tests.
+- Added shared-start, oracle, program-penalty, split-marker, and held-out-group
+  analysis scripts used in the iScience submission.
+- Added regression tests for identifiability controls, anchor metadata, and
+  logistic-normal prior preparation.
+
 # FibroDynMix 0.1.0
 
 ## Release v0.1.0

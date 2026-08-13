@@ -19,6 +19,9 @@ test_that("simulate_fibrodynmix returns coherent count data and truth", {
   expect_true(all(sim$counts == round(sim$counts)))
   expect_equal(nrow(sim$gene_metadata), 120)
   expect_equal(dim(sim$parameters$beta_kg), c(6, 120))
+  expect_equal(dim(sim$parameters$donor_state_logit_mean), c(4, 6))
+  expect_equal(rownames(sim$parameters$donor_state_logit_mean), unique(sim$cell_metadata$donor_id))
+  expect_equal(sim$parameters$state_sd, 0.35)
 })
 
 test_that("discrete scenario produces one-hot state memberships", {

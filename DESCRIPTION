@@ -1,6 +1,6 @@
 Package: FibroDynMix
-Title: Hierarchical Bayesian Dynamic Mixture Models for Fibroblast Plasticity
-Version: 0.1.0
+Title: Marker-Anchored Negative-Binomial Models for Fibroblast State Mixtures
+Version: 0.1.1
 Authors@R:
     c(
         person("Ying", "Jiang", email = "96768072+jiangcongxin@users.noreply.github.com", role = c("aut", "cre")),
@@ -11,10 +11,11 @@ Authors@R:
 Author: Ying Jiang [aut, cre], Guiqiang Li [aut], Xiaodong Chen [aut],
     Jingru Wang [aut]
 Maintainer: Ying Jiang <96768072+jiangcongxin@users.noreply.github.com>
-Description: Simulation and modeling utilities for FibroDynMix, a
-    hierarchical negative-binomial generative framework for fibroblast
-    state mixtures, cohort effects, marker-program recovery, and transition
-    flow inference from single-cell count data.
+Description: Simulation and modeling utilities for marker-anchored
+    negative-binomial estimation of fibroblast state mixtures from single-cell
+    count data. The package supports fixed cell-specific reference-logit
+    anchors, optional study and donor effects, known-truth recovery diagnostics,
+    and held-out count-prediction benchmarks.
 License: MIT + file LICENSE
 Imports:
     Matrix

@@ -129,6 +129,12 @@ simulate_fibrodynmix <- function(n_studies = 2,
 
   counts <- matrix(0L, nrow = n_genes, ncol = n_cells, dimnames = list(gene_ids, NULL))
   z <- matrix(NA_real_, nrow = n_cells, ncol = n_states, dimnames = list(NULL, state_names))
+  donor_state_logit_mean <- matrix(
+    NA_real_,
+    nrow = n_donors,
+    ncol = n_states,
+    dimnames = list(donor_ids, state_names)
+  )
   cell_metadata <- data.frame(
     cell_id = sprintf("Cell%06d", seq_len(n_cells)),
     study_id = character(n_cells),
@@ -150,6 +156,7 @@ simulate_fibrodynmix <- function(n_studies = 2,
     cell_idx <- cell_cursor:(cell_cursor + donor_cells - 1L)
 
     donor_mean <- donor_state_mean(donor_metadata[d, ], state_names, scenario)
+    donor_state_logit_mean[d, ] <- donor_mean
     eta <- matrix(
       rnorm(donor_cells * n_states, 0, state_sd),
       nrow = donor_cells,
@@ -232,6 +239,8 @@ simulate_fibrodynmix <- function(n_studies = 2,
       phi_g = phi_g,
       study_effect = study_effect,
       donor_effect = donor_effect,
+      donor_state_logit_mean = donor_state_logit_mean,
+      state_sd = state_sd,
       marker_index = marker_index,
       scenario = scenario
     )
