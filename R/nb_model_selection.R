@@ -95,6 +95,35 @@ select_fibrodynmix_nb_model <- function(counts,
     marker_index = marker_index,
     library_size = library_size
   )$scores
+  train_counts <- counts[, split$train, drop = FALSE]
+  train_library_size <- library_size[split$train]
+  fit_nb_args_template <- subset_nb_selection_args(nb_args, split$train, n_cells = ncol(counts))
+  shared_initialization_source <- "supplied_initial_state"
+  if (is.null(fit_nb_args_template$initial_state)) {
+    initializer_args <- fit_nb_args_template$initializer_args
+    if (is.null(initializer_args)) {
+      initializer_args <- list()
+    }
+    initializer_call <- utils::modifyList(
+      list(
+        counts = train_counts,
+        marker_index = marker_index,
+        library_size = train_library_size
+      ),
+      initializer_args
+    )
+    if (!is.null(seed)) {
+      old_seed <- preserve_seed()
+      on.exit(restore_seed(old_seed), add = TRUE)
+      set.seed(as.integer(seed) + 1000003L)
+    }
+    shared_initializer <- do.call(fit_fibrodynmix_initializer, initializer_call)
+    fit_nb_args_template$initial_state <- list(
+      z_hat = shared_initializer$z_hat,
+      beta_hat = shared_initializer$beta_hat
+    )
+    shared_initialization_source <- "selector_shared_marker_initializer"
+  }
 
   candidate_rows <- list()
   component_rows <- list()
@@ -102,15 +131,14 @@ select_fibrodynmix_nb_model <- function(counts,
 
   for (idx in seq_along(candidate_n_outer)) {
     n_outer <- candidate_n_outer[[idx]]
-    fit_nb_args <- subset_nb_selection_args(nb_args, split$train, n_cells = ncol(counts))
     fit_args <- modifyList(
       list(
-        counts = counts[, split$train, drop = FALSE],
+        counts = train_counts,
         marker_index = marker_index,
-        library_size = library_size[split$train],
+        library_size = train_library_size,
         n_outer = n_outer
       ),
-      fit_nb_args
+      fit_nb_args_template
     )
     fit <- do.call(fit_fibrodynmix_nb, fit_args)
 
@@ -180,6 +208,7 @@ select_fibrodynmix_nb_model <- function(counts,
       train_n_cells = sum(split$train),
       holdout_n_cells = sum(split$holdout),
       stop_reason = fit$stop_reason,
+      training_initialization_source = fit$initialization_source,
       stringsAsFactors = FALSE
     )
     component_rows[[idx]] <- data.frame(
@@ -207,6 +236,7 @@ select_fibrodynmix_nb_model <- function(counts,
       stringsAsFactors = FALSE
     ),
     selection_weights = selection_weights,
+    shared_initialization_source = shared_initialization_source,
     selection_rule = "max weighted normalized held-out NB objective, z stability, marker-gradient preservation, and downstream validation; training objective is reported but not used"
   )
 }
@@ -216,6 +246,17 @@ subset_nb_selection_args <- function(nb_args, train, n_cells) {
   for (field in c("study_id", "donor_id")) {
     if (!is.null(out[[field]]) && length(out[[field]]) == n_cells) {
       out[[field]] <- out[[field]][train]
+    }
+  }
+  if (!is.null(out$initial_state) && is.list(out$initial_state) && !is.null(out$initial_state$z_hat)) {
+    z_hat <- as.matrix(out$initial_state$z_hat)
+    if (nrow(z_hat) == n_cells) {
+      if (!is.null(rownames(z_hat)) && !is.null(names(train))) {
+        z_hat <- z_hat[names(train)[train], , drop = FALSE]
+      } else {
+        z_hat <- z_hat[train, , drop = FALSE]
+      }
+      out$initial_state$z_hat <- z_hat
     }
   }
   out

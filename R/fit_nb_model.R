@@ -23,6 +23,10 @@
 #' @param n_outer Number of alternating NB optimization iterations.
 #' @param initializer_args Named list of arguments passed to
 #'   `fit_fibrodynmix_initializer()`.
+#' @param initial_state Optional named list containing `z_hat` and `beta_hat`
+#'   used as a fixed NB starting state. Supplying it bypasses the randomized
+#'   marker-guided initializer and makes outer-iteration comparisons
+#'   reproducible.
 #' @param estimate_phi Whether to update gene-specific `phi` by
 #'   method-of-moments after each outer iteration.
 #' @param phi_init Optional initial gene-specific NB size vector.
@@ -30,11 +34,32 @@
 #' @param marker_l2 Non-negative L2 penalty that keeps prior marker coefficients
 #'   oriented toward positive state-specific programs.
 #' @param marker_weight Optional per-state, per-gene marker reliability weights.
+#' @param beta_constraint Identification constraint for state-gene programs.
+#'   `"sum_to_zero"` fits each gene program in a sum-to-zero contrast space and
+#'   centers the marker target in the same space; `"none"` retains the legacy
+#'   unrestricted parameterization.
 #' @param fit_study_effect Whether to fit ridge-penalized study-by-gene effects.
 #' @param study_l2 Non-negative L2 penalty for study effects.
 #' @param fit_donor_effect Whether to fit ridge-penalized donor-by-gene effects.
 #' @param donor_l2 Non-negative L2 penalty for donor effects.
 #' @param z_l2 Non-negative L2 penalty for cell logits in simplex updates.
+#' @param z_prior Optional fixed logistic-normal prior for reference logits of
+#'   cell-state weights. Use `estimate_group_logistic_normal_prior()` to build
+#'   an empirical donor- or study-level prior from an external initialization.
+#'   Supplying this argument disables the default `z_anchor` unless an anchor is
+#'   explicitly requested. The prior is additive to `z_l2`; set `z_l2 = 0` when
+#'   a zero-centered ridge is not desired in addition to the logistic-normal
+#'   prior.
+#' @param z_anchor Coordinate-stabilization rule. The default
+#'   `"initializer_logit"` constructs a cell-specific logistic-normal anchor
+#'   from the marker-guided initialization so NB refinement cannot silently
+#'   redefine the marker state coordinate. `"none"` reproduces the legacy
+#'   unanchored NB update. This is a proximal marker anchor, not a full
+#'   hierarchical posterior.
+#' @param z_anchor_sd Reference-logit standard deviation of the default
+#'   initializer anchor. Smaller values retain the marker coordinate more
+#'   tightly. The default is intentionally tight; examine sensitivity to this
+#'   setting when the marker coordinate is uncertain.
 #' @param optimizer Optimizer for NB subproblems. One of `"BFGS"` or `"L-BFGS-B"`.
 #' @param optimizer_control Control list for `stats::optim()`, merged with
 #'   `maxit` defaults.
@@ -66,17 +91,22 @@ fit_fibrodynmix_nb <- function(counts,
                                study_id = NULL,
                                n_outer = 5,
                                initializer_args = list(),
+                               initial_state = NULL,
                                estimate_phi = TRUE,
                                phi_init = NULL,
                                beta_l2 = 0.01,
                                marker_l2 = 0.05,
                                marker_weight = NULL,
+                               beta_constraint = c("sum_to_zero", "none"),
                                fit_study_effect = FALSE,
                                study_l2 = 0.1,
                                donor_id = NULL,
                                fit_donor_effect = FALSE,
                                donor_l2 = 0.1,
                                z_l2 = 0.001,
+                               z_prior = NULL,
+                               z_anchor = c("initializer_logit", "none"),
+                               z_anchor_sd = 0.1,
                                optimizer = c("BFGS", "L-BFGS-B"),
                                optimizer_control = list(),
                                maxit_beta = 50,
@@ -102,6 +132,20 @@ fit_fibrodynmix_nb <- function(counts,
     stop("`marker_index` must be a named list.", call. = FALSE)
   }
   assert_positive_integer(n_outer, "n_outer")
+  beta_constraint <- match.arg(beta_constraint)
+  z_anchor_was_supplied <- !missing(z_anchor)
+  if (!is.null(z_prior) && !z_anchor_was_supplied) {
+    z_anchor <- "none"
+  } else {
+    z_anchor <- match.arg(z_anchor)
+  }
+  if (!is.null(z_prior) && !identical(z_anchor, "none")) {
+    stop("Supply either `z_prior` or `z_anchor = \"initializer_logit\"`, not both.", call. = FALSE)
+  }
+  if (identical(z_anchor, "initializer_logit") &&
+      (length(z_anchor_sd) != 1L || is.na(z_anchor_sd) || !is.finite(z_anchor_sd) || z_anchor_sd <= 0)) {
+    stop("`z_anchor_sd` must be a positive finite numeric scalar for the initializer anchor.", call. = FALSE)
+  }
   if (length(beta_l2) != 1L || is.na(beta_l2) || beta_l2 < 0) {
     stop("`beta_l2` must be a non-negative numeric scalar.", call. = FALSE)
   }
@@ -155,18 +199,26 @@ fit_fibrodynmix_nb <- function(counts,
     donor_id <- as.character(donor_id)
   }
 
-  initializer_call <- utils::modifyList(
-    list(
-      counts = counts,
-      marker_index = marker_index,
-      library_size = library_size
-    ),
-    initializer_args
+  init <- resolve_nb_initial_state(
+    initial_state = initial_state,
+    counts = counts,
+    marker_index = marker_index,
+    library_size = library_size,
+    initializer_args = initializer_args
   )
-  init <- do.call(fit_fibrodynmix_initializer, initializer_call)
+  initialization_source <- if (is.null(initial_state)) "marker_guided_initializer" else "supplied_initial_state"
   z_hat <- init$z_hat
   beta_hat <- init$beta_hat
-  marker_target <- build_marker_beta_target(
+  if (identical(z_anchor, "initializer_logit")) {
+    z_prior <- prepare_initializer_logit_anchor(
+      z = z_hat,
+      logit_sd = z_anchor_sd
+    )
+  }
+  if (!is.null(z_prior)) {
+    z_prior <- validate_logistic_normal_prior_for_simplex(z_prior, z_hat)
+  }
+  marker_target_raw <- build_marker_beta_target(
     marker_index = marker_index,
     gene_names = rownames(counts),
     state_names = colnames(z_hat),
@@ -181,6 +233,13 @@ fit_fibrodynmix_nb <- function(counts,
     if (any(phi_hat <= 0)) {
       stop("`phi_init` must contain positive values.", call. = FALSE)
     }
+  }
+  marker_target <- marker_target_raw
+  if (identical(beta_constraint, "sum_to_zero")) {
+    canonical <- canonicalize_nb_alpha_beta(alpha = alpha_hat, beta = beta_hat)
+    alpha_hat <- canonical$alpha
+    beta_hat <- canonical$beta
+    marker_target <- center_state_program_matrix(marker_target_raw)
   }
   study_effect <- if (isTRUE(fit_study_effect)) {
     initialize_group_effect(study_id, rownames(counts))
@@ -208,6 +267,8 @@ fit_fibrodynmix_nb <- function(counts,
     beta_l2 = beta_l2,
     marker_target = marker_target,
     marker_l2 = marker_l2,
+    z_l2 = z_l2,
+    z_prior = z_prior,
     effect_l2 = study_l2,
     donor_effect_l2 = donor_l2,
     average = TRUE
@@ -250,6 +311,7 @@ fit_fibrodynmix_nb <- function(counts,
       beta_l2 = beta_l2,
       marker_target = marker_target,
       marker_l2 = marker_l2,
+      beta_constraint = beta_constraint,
       optimizer = optimizer,
       optimizer_control = optimizer_control,
       maxit = maxit_beta
@@ -312,6 +374,7 @@ fit_fibrodynmix_nb <- function(counts,
       donor_effect = donor_effect,
       donor_id = donor_id,
       z_l2 = z_l2,
+      z_prior = z_prior,
       optimizer = optimizer,
       optimizer_control = optimizer_control,
       maxit = maxit_z
@@ -338,6 +401,8 @@ fit_fibrodynmix_nb <- function(counts,
       beta_l2 = beta_l2,
       marker_target = marker_target,
       marker_l2 = marker_l2,
+      z_l2 = z_l2,
+      z_prior = z_prior,
       effect_l2 = study_l2,
       donor_effect_l2 = donor_l2,
       average = TRUE
@@ -446,9 +511,104 @@ fit_fibrodynmix_nb <- function(counts,
       (!isTRUE(fit_donor_effect) || all(converged_donor)),
     convergence = list(beta = converged_beta, z = converged_z, study = converged_study, donor = converged_donor, rolled_back = rollback_flags),
     marker_target = marker_target,
+    marker_target_raw = marker_target_raw,
+    beta_constraint = beta_constraint,
+    z_prior = z_prior,
+    z_anchor = z_anchor,
+    z_anchor_sd = if (identical(z_anchor, "initializer_logit")) z_anchor_sd else NA_real_,
     initializer = init,
+    initialization_source = initialization_source,
     call = match.call()
   )
+}
+
+resolve_nb_initial_state <- function(initial_state,
+                                     counts,
+                                     marker_index,
+                                     library_size,
+                                     initializer_args) {
+  if (is.null(initial_state)) {
+    initializer_call <- utils::modifyList(
+      list(
+        counts = counts,
+        marker_index = marker_index,
+        library_size = library_size
+      ),
+      initializer_args
+    )
+    return(do.call(fit_fibrodynmix_initializer, initializer_call))
+  }
+  if (!is.list(initial_state) ||
+      is.null(initial_state$z_hat) ||
+      is.null(initial_state$beta_hat)) {
+    stop("`initial_state` must be a list containing `z_hat` and `beta_hat`.", call. = FALSE)
+  }
+
+  state_names <- names(marker_index)
+  cell_names <- colnames(counts)
+  gene_names <- rownames(counts)
+  z_hat <- as.matrix(initial_state$z_hat)
+  beta_hat <- as.matrix(initial_state$beta_hat)
+  storage.mode(z_hat) <- "double"
+  storage.mode(beta_hat) <- "double"
+
+  if (nrow(z_hat) != length(cell_names) || ncol(z_hat) != length(state_names)) {
+    stop("`initial_state$z_hat` must have one row per cell and one column per state.", call. = FALSE)
+  }
+  if (nrow(beta_hat) != length(state_names) || ncol(beta_hat) != length(gene_names)) {
+    stop("`initial_state$beta_hat` must have one row per state and one column per gene.", call. = FALSE)
+  }
+  if (!is.null(rownames(z_hat))) {
+    if (!all(cell_names %in% rownames(z_hat))) {
+      stop("`initial_state$z_hat` row names must contain all count-matrix cells.", call. = FALSE)
+    }
+    z_hat <- z_hat[cell_names, , drop = FALSE]
+  }
+  if (!is.null(colnames(z_hat))) {
+    if (!all(state_names %in% colnames(z_hat))) {
+      stop("`initial_state$z_hat` column names must contain all marker states.", call. = FALSE)
+    }
+    z_hat <- z_hat[, state_names, drop = FALSE]
+  }
+  if (!is.null(rownames(beta_hat))) {
+    if (!all(state_names %in% rownames(beta_hat))) {
+      stop("`initial_state$beta_hat` row names must contain all marker states.", call. = FALSE)
+    }
+    beta_hat <- beta_hat[state_names, , drop = FALSE]
+  }
+  if (!is.null(colnames(beta_hat))) {
+    if (!all(gene_names %in% colnames(beta_hat))) {
+      stop("`initial_state$beta_hat` column names must contain all count-matrix genes.", call. = FALSE)
+    }
+    beta_hat <- beta_hat[, gene_names, drop = FALSE]
+  }
+  if (anyNA(z_hat) || any(!is.finite(z_hat)) || any(z_hat < 0) || any(rowSums(z_hat) <= 0)) {
+    stop("`initial_state$z_hat` must contain non-negative finite weights with positive row sums.", call. = FALSE)
+  }
+  if (anyNA(beta_hat) || any(!is.finite(beta_hat))) {
+    stop("`initial_state$beta_hat` must contain finite numeric coefficients.", call. = FALSE)
+  }
+  z_hat <- z_hat / rowSums(z_hat)
+  dimnames(z_hat) <- list(cell_names, state_names)
+  dimnames(beta_hat) <- list(state_names, gene_names)
+
+  initial_state$z_hat <- z_hat
+  initial_state$beta_hat <- beta_hat
+  initial_state
+}
+
+center_state_program_matrix <- function(beta) {
+  beta <- as.matrix(beta)
+  sweep(beta, 2L, colMeans(beta), "-")
+}
+
+canonicalize_nb_alpha_beta <- function(alpha, beta) {
+  beta <- as.matrix(beta)
+  offsets <- colMeans(beta)
+  beta <- sweep(beta, 2L, offsets, "-")
+  alpha <- as.numeric(alpha) + offsets
+  names(alpha) <- colnames(beta)
+  list(alpha = alpha, beta = beta, offsets = offsets)
 }
 
 update_alpha_beta_nb <- function(counts,
@@ -464,23 +624,42 @@ update_alpha_beta_nb <- function(counts,
                                  beta_l2,
                                  marker_target,
                                  marker_l2,
+                                 beta_constraint = c("sum_to_zero", "none"),
                                  optimizer,
                                  optimizer_control,
                                  maxit) {
   n_genes <- nrow(counts)
   n_states <- ncol(z)
+  beta_constraint <- match.arg(beta_constraint)
   new_beta <- beta
   new_alpha <- alpha
   converged <- logical(n_genes)
+  contrast_matrix <- if (identical(beta_constraint, "sum_to_zero")) {
+    rbind(diag(n_states - 1L), rep(-1, n_states - 1L))
+  } else {
+    NULL
+  }
 
   for (g in seq_len(n_genes)) {
     y <- matrix_gene_vector(counts, g)
     phi_g <- phi[g]
-    start <- c(alpha[g], beta[, g])
+    beta_g <- as.numeric(beta[, g])
+    alpha_g <- alpha[g]
+    if (identical(beta_constraint, "sum_to_zero")) {
+      offset <- mean(beta_g)
+      beta_g <- beta_g - offset
+      alpha_g <- alpha_g + offset
+      start <- c(alpha_g, beta_g[seq_len(n_states - 1L)])
+      decode_beta <- function(par) as.vector(contrast_matrix %*% par[-1L])
+    } else {
+      start <- c(alpha_g, beta_g)
+      decode_beta <- function(par) as.numeric(par[-1L])
+    }
     fit <- stats::optim(
       par = start,
       fn = function(par) {
-        eta <- par[1L] + as.vector(z %*% par[-1L])
+        beta_current <- decode_beta(par)
+        eta <- par[1L] + as.vector(z %*% beta_current)
         if (!is.null(study_effect)) {
           eta <- eta + study_effect[study_id, g]
         }
@@ -490,8 +669,8 @@ update_alpha_beta_nb <- function(counts,
         log_mu <- log(library_size) + eta
         log_mu <- pmin(pmax(log_mu, -745), 700)
         nll <- -sum(stats::dnbinom(y, size = phi_g, mu = exp(log_mu), log = TRUE))
-        marker_penalty <- marker_l2 * sum((par[-1L] - marker_target[, g])^2)
-        nll + beta_l2 * sum(par[-1L]^2) + marker_penalty
+        marker_penalty <- marker_l2 * sum((beta_current - marker_target[, g])^2)
+        nll + beta_l2 * sum(beta_current^2) + marker_penalty
       },
       method = optimizer,
       control = modifyList(
@@ -500,7 +679,7 @@ update_alpha_beta_nb <- function(counts,
       )
     )
     new_alpha[g] <- fit$par[1L]
-    new_beta[, g] <- fit$par[-1L]
+    new_beta[, g] <- decode_beta(fit$par)
     converged[g] <- fit$convergence == 0
   }
 
@@ -521,6 +700,7 @@ update_z_nb <- function(counts,
                         donor_effect,
                         donor_id,
                         z_l2,
+                        z_prior = NULL,
                         optimizer,
                         optimizer_control,
                         maxit,
@@ -535,6 +715,9 @@ update_z_nb <- function(counts,
   }
   assert_positive_integer(chunk_size, "chunk_size")
   assert_positive_integer(n_workers, "n_workers")
+  if (!is.null(z_prior)) {
+    z_prior <- validate_logistic_normal_prior_for_simplex(z_prior, z)
+  }
 
   chunks <- split(seq_len(n_cells), ceiling(seq_len(n_cells) / chunk_size))
   optimizer_results <- vector("list", n_cells)
@@ -555,6 +738,7 @@ update_z_nb <- function(counts,
         donor_effect = donor_effect,
         donor_id = donor_id,
         z_l2 = z_l2,
+        z_prior = z_prior,
         optimizer = optimizer,
         optimizer_control = optimizer_control,
         maxit = maxit
@@ -610,6 +794,7 @@ optimize_one_z_nb <- function(i,
                               donor_effect,
                               donor_id,
                               z_l2,
+                              z_prior = NULL,
                               optimizer,
                               optimizer_control,
                               maxit) {
@@ -629,7 +814,12 @@ optimize_one_z_nb <- function(i,
       log_mu <- log(library_size[i]) + eta
       log_mu <- pmin(pmax(log_mu, -745), 700)
       nll <- -sum(stats::dnbinom(y, size = phi, mu = exp(log_mu), log = TRUE))
-      nll + z_l2 * sum(logits^2)
+      prior_penalty <- if (is.null(z_prior)) {
+        0
+      } else {
+        logistic_normal_prior_quadratic(logits, z_prior, cell_index = i)
+      }
+      nll + z_l2 * sum(logits^2) + prior_penalty
     },
     method = optimizer,
     control = modifyList(

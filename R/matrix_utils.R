@@ -60,3 +60,18 @@ log_normalize_counts <- function(counts, library_size, scale_factor = 10000) {
   }
   log1p(sweep(counts, 2L, library_size, "/") * scale_factor)
 }
+
+# Computes the squared reference-logit norm used by the NB cell-state update.
+# Rows are expected to be simplex weights.  The epsilon convention intentionally
+# matches `simplex_to_logits()` in fit_nb_model.R so objective reporting and the
+# per-cell optimizer remain numerically identical at boundary weights.
+simplex_logit_l2 <- function(z) {
+  z <- as.matrix(z)
+  if (!is.numeric(z) || ncol(z) < 2L) {
+    stop("`z` must be a numeric simplex matrix with at least two states.", call. = FALSE)
+  }
+  z <- pmax(z, .Machine$double.eps)
+  reference <- z[, ncol(z)]
+  logits <- log(sweep(z[, seq_len(ncol(z) - 1L), drop = FALSE], 1L, reference, "/"))
+  sum(logits^2)
+}

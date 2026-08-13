@@ -37,6 +37,8 @@ test_that("select_fibrodynmix_nb_model returns a validation-aware choice", {
   ) %in% colnames(result$candidate_scores)))
   expect_true(all(is.finite(result$candidate_scores$heldout_nb_objective)))
   expect_true(all(is.finite(result$candidate_scores$selection_score)))
+  expect_equal(length(unique(result$candidate_scores$training_initialization_source)), 1)
+  expect_equal(result$shared_initialization_source, "selector_shared_marker_initializer")
   expect_equal(nrow(result$split), ncol(sim$counts))
   expect_true(any(result$split$split == "holdout"))
   expect_true(any(result$split$split == "train"))

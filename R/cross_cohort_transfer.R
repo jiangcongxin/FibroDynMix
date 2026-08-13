@@ -111,6 +111,7 @@ fit_fibrodynmix_transfer <- function(counts,
     alpha = alpha,
     phi = phi,
     library_size = library_size,
+    z_l2 = z_l2,
     average = TRUE
   )
   loglik <- fibrodynmix_nb_loglik(
